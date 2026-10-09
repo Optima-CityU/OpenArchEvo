@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+    # Code paths only; the prompt templates (openarchevo/llm/templates/*.md) count as code.
+    paths: ["openarchevo/**", "scripts/**", "training/**", "tests/**", "configs/**", "examples/**",
+            "pyproject.toml", "requirements.txt", ".github/workflows/tests.yml"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cpu:
+    # Core package, unit tests and the offline dry run; no PyTorch (model tests are skipped).
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      - run: python -c "import openarchevo"
+      - run: pytest -q
+      - run: python scripts/run_round.py --run-dir "$RUNNER_TEMP/dry" --dry-run --auto

@@ -1,0 +1,30 @@
+# Search-time proxy training on WikiText-2 (paper, Table "Proxy-training configurations").
+# This is the SpikingSSM-consistent proxy config used in the search: SDN spiking neurons and
+# pre-norm spiking blocks as in SpikingSSM (Shen et al., AAAI 2025), with the hyperparameters of
+# the original proxy-training scripts. See docs/pipeline.md (Proxy training).
+# Search fitness uses the best validation perplexity.
+task: wikitext2
+data_dir: ./data/wikitext-2          # wiki.{train,valid,test}.tokens
+tokenizer: gpt2                      # GPT-2 byte-level BPE (vocab 50257), local path or hub name
+cache_dir: ./data/cache
+seq_len: 512                         # concatenated token stream chunked into 512-token blocks
+
+model:
+  n_layers: 6
+  d_model: 256
+  num_heads: 8
+  d_ffn_mult: 4
+  dropout: 0.2
+  neuron_type: sdn                   # sdn needs OPENARCHEVO_SDN_PATH; bptt / sltt need no asset
+
+optim:
+  epochs: 30
+  batch_size: 16
+  lr: 6.0e-3
+  weight_decay: 0.15
+  betas: [0.9, 0.95]
+  warmup_steps: 600
+  grad_clip: 2.0
+
+num_workers: 4
+seed: null                           # the original runs did not fix a training seed

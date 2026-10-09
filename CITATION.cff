@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use OpenArchEvo, please cite the paper below."
+title: "OpenArchEvo"
+type: software
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/THUROI0787/OpenArchEvo"
+url: "https://thuroi0787.github.io/OpenArchEvo/"
+authors:
+  - family-names: Zhao
+    given-names: Ruoyu
+  - family-names: Wu
+    given-names: Jiaqi
+  - family-names: Zhu
+    given-names: Chenyu
+  - family-names: Lu
+    given-names: Zhichao
+preferred-citation:
+  type: article
+  title: "Large Language Model-Guided Evolutionary Discovery of Native Neural Architectures for Spiking Sequence Modeling"
+  authors:
+    - family-names: Zhao
+      given-names: Ruoyu
+    - family-names: Wu
+      given-names: Jiaqi
+    - family-names: Zhu
+      given-names: Chenyu
+    - family-names: Lu
+      given-names: Zhichao
+  year: 2026
+  journal: "arXiv preprint arXiv:2609.40258"
+  url: "https://arxiv.org/abs/2609.40258"
+  identifiers:
+    - type: other
+      value: "arXiv:2609.40258"

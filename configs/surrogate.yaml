@@ -1,0 +1,36 @@
+# Surrogate service: fingerprint extraction + TabPFN prediction.
+# Start with: python scripts/start_surrogate.py --config configs/surrogate.yaml
+#
+# WARNING: the service executes any code posted to it (in a subprocess, but not
+# sandboxed). Keep it on 127.0.0.1 and reach it from other machines through an
+# SSH tunnel (ssh -N -L 9000:127.0.0.1:9000 gpu-host). start_surrogate.py
+# refuses any other host unless you pass --allow-remote and set SURROGATE_TOKEN.
+
+host: 127.0.0.1
+port: 9000
+token_env: SURROGATE_TOKEN            # shared secret; the search side sends it too (surrogate.token_env)
+
+tabpfn:
+  model_path_env: TABPFN_MODEL_PATH   # TabPFN-2.5 regressor checkpoint you downloaded yourself
+  device: cuda:0
+  random_state: 42
+  log_targets: [wikitext2_ppl]        # perplexity is predicted in log space
+
+fingerprint:
+  seed: 42                            # fixed initialization seed for every candidate
+  neuron_type: sdn                    # sdn (paper; needs OPENARCHEVO_SDN_PATH) | bptt | sltt
+  timeout_s: 360                      # per-program probe timeout (runs in a subprocess)
+  devices: [cuda:0]                   # one probe at a time per listed device
+  probe:
+    batch_path: null                  # torch file with (tokens, targets); null -> seeded synthetic batch
+    batch_size: 32
+    seq_len: 2000
+    vocab_size: 20                    # ListOps vocabulary incl. <pad>, <unk>, <eos>
+    n_classes: 10
+  wrapper:                            # fixed 2-layer ListOps wrapper used for probing
+    n_layers: 2
+    d_model: 128
+    num_heads: 4
+    d_ffn_mult: 2
+    dropout: 0.1
+  structure_seq_len: 5767             # single-block trace; matches the fixed similarity bounds

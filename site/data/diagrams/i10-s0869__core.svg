@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 650" width="1180" height="650" class="av" data-theme="light">
+
+<defs>
+<marker id="i10-s0869-core-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i10-s0869-core-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i10-s0869-core-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i10-s0869-core-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i10-s0869-core-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i10-s0869-core-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i10-s0869-core-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">Comba closed-loop state update</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">per head; chunkwise (64) in code, shown per token · q, k, v, g are outputs of spiking projections · feedback and renorm act once per chunk</text>
+<g transform="translate(71.0,304.4)">
+<path class="e e-data" d="M186.2,-134.4 L531.2,-134.4" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M191.2,-67.2 L243.6,-67.2" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M359.6,-67.2 L426.8,-67.2" marker-end="url(#i10-s0869-core-m-data)"/>
+<text class="elbl k-data" x="393.2" y="-72.2" text-anchor="middle">f</text>
+<path class="e e-data" d="M13.0,0.0 L431.8,0.0 Q440.8,0.0 440.8,-9.0 L440.8,-53.2" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M454.8,-67.2 L518.2,-67.2" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M545.2,-81.2 L545.2,-120.4" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M559.2,-134.4 L658.8,-134.4" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M13.0,67.2 L658.8,67.2" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M13.0,134.4 L663.8,134.4 Q672.8,134.4 672.8,125.4 L672.8,81.2" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M672.8,53.2 L672.8,-120.4" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M686.8,-134.4 L786.4,-134.4" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M814.4,-134.4 L892.6,-134.4" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M939.6,-117.4 L939.6,187.6" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M13.0,201.6 L925.6,201.6" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-data" d="M953.6,201.6 L1042.6,201.6" marker-end="url(#i10-s0869-core-m-data)"/>
+<path class="e e-state" d="M139.2,-117.4 L139.2,-84.2" marker-end="url(#i10-s0869-core-m-state)"/>
+<path class="e e-state" d="M939.6,-151.4 L939.6,-181.4 Q939.6,-190.4 930.6,-190.4 L148.2,-190.4 Q139.2,-190.4 139.2,-181.4 L139.2,-151.4" marker-end="url(#i10-s0869-core-m-state)"/>
+<text class="elbl k-state" x="539.4" y="-195.4" text-anchor="middle">next token</text>
+<g class="node fam-io from-spk" data-id="g">
+<circle class="spkring" cx="0" cy="0" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,3.5)"/>
+<circle class="sh" cx="0" cy="0" r="13.0"/>
+<text class="lbl" x="0" y="4.0" font-size="11" text-anchor="middle" font-weight="600">g</text>
+</g>
+<g class="node fam-io from-spk" data-id="k">
+<circle class="spkring" cx="0" cy="67.2" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,70.7)"/>
+<circle class="sh" cx="0" cy="67.2" r="13.0"/>
+<text class="lbl" x="0" y="71.2" font-size="11" text-anchor="middle" font-weight="600">k</text>
+</g>
+<g class="node fam-io from-spk" data-id="v">
+<circle class="spkring" cx="0" cy="134.4" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,137.9)"/>
+<circle class="sh" cx="0" cy="134.4" r="13.0"/>
+<text class="lbl" x="0" y="138.4" font-size="11" text-anchor="middle" font-weight="600">v</text>
+</g>
+<g class="node fam-io from-spk" data-id="q">
+<circle class="spkring" cx="0" cy="201.6" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,205.1)"/>
+<circle class="sh" cx="0" cy="201.6" r="13.0"/>
+<text class="lbl" x="0" y="205.6" font-size="11" text-anchor="middle" font-weight="600">q</text>
+</g>
+<g class="node fam-state" data-id="Sp">
+<rect class="sh" x="92.19999999999999" y="-151.4" width="94" height="34" rx="10"/>
+<text class="lbl" x="139.2" y="-135.5" font-size="12.5" font-weight="600" text-anchor="middle">S<tspan dy="3.5" font-size="72%">t-1</tspan><tspan dy="-3.5">​</tspan></text>
+<text class="sub" x="139.2" y="-123.0" text-anchor="middle">d<tspan dy="3.5" font-size="72%">k</tspan><tspan dy="-3.5">​</tspan> × d<tspan dy="3.5" font-size="72%">v</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-stat" data-id="sbar" data-code="L80-L81">
+<title>normalised state statistic s̄ (one scalar per head)</title>
+<rect class="sh" x="87.19999999999999" y="-84.2" width="104" height="34" rx="17.0"/>
+<text class="lbl" x="139.2" y="-62.8" font-size="12.5" font-weight="600" text-anchor="middle">mean(S/‖S‖)</text>
+</g>
+<g class="node fam-lin" data-id="fbn" data-code="L84-L85">
+<title>non-spiking (analog) MLP on a per-head state statistic</title>
+<rect class="sh" x="243.60000000000002" y="-84.2" width="116" height="34" rx="7"/>
+<text class="lbl" x="301.6" y="-68.3" font-size="12.5" font-weight="600" text-anchor="middle">feedback MLP</text>
+<text class="sub" x="301.6" y="-55.8" text-anchor="middle">1→8→1 · 2tanh</text>
+</g>
+<g class="node fam-op" data-id="gf" data-code="L89">
+<circle class="sh" cx="440.79999999999995" cy="-67.2" r="14.0"/>
+<text class="lbl" x="440.79999999999995" y="-61.8" font-size="15" text-anchor="middle" font-weight="600">+</text>
+<text class="sub" x="450.5" y="-42.2" text-anchor="start">g + f</text>
+</g>
+<g class="node fam-act" data-id="al" data-code="L89">
+<title>α = σ(g+f), computed as exp(logsigmoid) with cumulative decay inside the chunk</title>
+<rect class="sh" x="518.2" y="-81.2" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="545.2" y="-63.4" font-size="11" font-weight="600" text-anchor="middle">σ</text>
+</g>
+<g class="node fam-op" data-id="dm" data-code="L111">
+<circle class="sh" cx="545.2" cy="-134.4" r="14.0"/>
+<text class="lbl" x="545.2" y="-129.0" font-size="15" text-anchor="middle" font-weight="600">×</text>
+<text class="sub" x="554.9" y="-109.4" text-anchor="start">α</text>
+</g>
+<g class="node fam-op" data-id="outer" data-code="L110">
+<circle class="sh" cx="672.8" cy="67.2" r="14.0"/>
+<text class="lbl" x="672.8" y="72.6" font-size="15" text-anchor="middle" font-weight="600">⊗</text>
+<text class="sub" x="682.5" y="92.2" text-anchor="start">k vᵀ</text>
+</g>
+<g class="node fam-op" data-id="upd" data-code="L111">
+<circle class="sh" cx="672.8" cy="-134.4" r="14.0"/>
+<text class="lbl" x="672.8" y="-129.0" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-op" data-id="rn" data-code="L116-L117">
+<title>hard cap on the state norm, once per chunk</title>
+<circle class="sh" cx="800.4000000000001" cy="-134.4" r="14.0"/>
+<text class="lbl" x="800.4000000000001" y="-129.0" font-size="15" text-anchor="middle" font-weight="600">÷</text>
+<text class="sub" x="810.1" y="-109.4" text-anchor="start">max(‖S‖/10, 1)</text>
+</g>
+<g class="node fam-state" data-id="S">
+<rect class="sh" x="892.5999999999999" y="-151.4" width="94" height="34" rx="10"/>
+<text class="lbl" x="939.6" y="-130.0" font-size="12.5" font-weight="600" text-anchor="middle">S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-op" data-id="read" data-code="L98-L103">
+<circle class="sh" cx="939.5999999999999" cy="201.6" r="14.0"/>
+<text class="lbl" x="939.5999999999999" y="207.0" font-size="15" text-anchor="middle" font-weight="600">·</text>
+<text class="sub" x="949.3" y="226.6" text-anchor="start">S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>ᵀ q</text>
+</g>
+<g class="node fam-io" data-id="o">
+<circle class="sh" cx="1055.6" cy="201.6" r="13.0"/>
+<text class="lbl" x="1055.6" y="205.6" font-size="11" text-anchor="middle" font-weight="600">o</text>
+</g>
+</g>
+<text class="eq" x="32" y="572.0" style="white-space:pre" xml:space="preserve">S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = α<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> · S<tspan dy="3.5" font-size="72%">t-1</tspan><tspan dy="-3.5">​</tspan> + k<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> v<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>ᵀ        o<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>ᵀ q<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>        (q, k L2-normalised)</text>
+<text class="eq" x="32" y="592.0" style="white-space:pre" xml:space="preserve">α<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = σ(g<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> + f),   f = 2·tanh(MLP(s̄)),   s̄ = mean(S/‖S‖<tspan dy="3.5" font-size="72%">F</tspan><tspan dy="-3.5">​</tspan>)      S ← S / max(‖S‖<tspan dy="3.5" font-size="72%">F</tspan><tspan dy="-3.5">​</tspan> / 10, 1)</text>
+<g class="legend">
+<g class="sw fam-lin"><rect class="sh" x="32" y="623.0" width="20" height="14" rx="4"/>
+</g>
+<text x="58" y="634.0">non-spiking linear (analog in)</text>
+<g class="sw fam-state"><rect class="sh" x="264.0" y="623.0" width="20" height="14" rx="5"/>
+</g>
+<text x="290.0" y="634.0">state tensor</text>
+<g class="sw fam-stat"><rect class="sh" x="384.4" y="623.0" width="20" height="14" rx="7"/>
+</g>
+<text x="410.4" y="634.0">spike-rate / state readout</text>
+<g class="sw fam-io from-spk"><circle class="spkring" cx="610.6" cy="630.0" r="7"/><circle class="sh" cx="610.6" cy="630.0" r="4.6"/><path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="scale(0.85) translate(696.0,745.3)"/></g>
+<text x="623.6" y="634.0">input from a spiking projection</text>
+<path class="e e-data" d="M835.8000000000001,630.0 h22"/>
+<text x="863.8000000000001" y="634.0">analog current</text>
+<path class="e e-state" d="M970.6,630.0 h22"/>
+<text x="998.6" y="634.0">state carry</text>
+</g>
+</svg>

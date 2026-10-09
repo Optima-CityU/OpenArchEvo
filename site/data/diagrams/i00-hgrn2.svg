@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1747 490" width="1747" height="490" class="av" data-theme="light">
+
+<defs>
+<marker id="i00-hgrn2-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-hgrn2-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-hgrn2-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-hgrn2-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-hgrn2-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i00-hgrn2-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i00-hgrn2-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">Spiking HGRN2</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">Iteration 0  ·  initial expert (model zoo)</text>
+<g class="chip spk"><rect x="32" y="82" width="126" height="24" rx="12"/><text x="95" y="98" text-anchor="middle">5 spiking sites</text></g>
+<g transform="translate(53.0,214.6)">
+<rect class="panel " x="167.0" y="-78.6" width="773.8" height="203.2" rx="14"/>
+<text class="cap" x="181.0" y="-61.6">Token mixer<tspan class="capsub" dx="8">Spiking HGRN2</tspan></text>
+<rect class="panel " x="1147.2" y="32.6" width="350.4" height="92.0" rx="14"/>
+<text class="cap" x="1161.2" y="49.6">Channel mixer<tspan class="capsub" dx="8">Spiking MLP (GELU)</tspan></text>
+<path class="e e-res" d="M13.0,201.6 L977.8,201.6" marker-end="url(#i00-hgrn2-m-res)"/>
+<path class="e e-res" d="M1005.8,201.6 L1061.2,201.6" marker-end="url(#i00-hgrn2-m-res)"/>
+<path class="e e-res" d="M1131.2,201.6 L1534.6,201.6" marker-end="url(#i00-hgrn2-m-res)"/>
+<path class="e e-res" d="M1562.6,201.6 L1628.4,201.6" marker-end="url(#i00-hgrn2-m-res)"/>
+<path class="e e-data" d="M13.0,201.6 L49.0,201.6 Q58.0,201.6 58.0,192.6 L58.0,65.0 Q58.0,56.0 67.0,56.0 L81.0,56.0" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M151.0,56.0 L165.0,56.0 Q174.0,56.0 174.0,47.0 L174.0,27.9 Q174.0,22.4 179.5,22.4 L185.0,22.4" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M151.0,56.0 L165.0,56.0 Q174.0,56.0 174.0,65.0 L174.0,84.1 Q174.0,89.6 179.5,89.6 L185.0,89.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M279.0,22.4 L306.8,22.4" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M279.0,89.6 L306.8,89.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M400.8,22.4 L442.8,22.4" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M400.8,89.6 L442.8,89.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M496.8,22.4 L559.8,22.4" marker-end="url(#i00-hgrn2-m-data)"/>
+<text class="elbl k-data" x="528.3" y="17.4" text-anchor="middle">input</text>
+<path class="e e-data" d="M496.8,89.6 L559.8,89.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<text class="elbl k-data" x="528.3" y="84.6" text-anchor="middle">forget</text>
+<path class="e e-data" d="M669.8,56.0 L719.0,56.0" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M789.0,56.0 L828.8,56.0" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M922.8,56.0 L982.8,56.0 Q991.8,56.0 991.8,65.0 L991.8,187.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M1096.2,187.6 L1096.2,98.6 Q1096.2,89.6 1105.2,89.6 L1165.2,89.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M1259.2,89.6 L1295.4,89.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M1349.4,89.6 L1385.6,89.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<path class="e e-data" d="M1479.6,89.6 L1539.6,89.6 Q1548.6,89.6 1548.6,98.6 L1548.6,187.6" marker-end="url(#i00-hgrn2-m-data)"/>
+<g class="node fam-io" data-id="xin">
+<circle class="sh" cx="0" cy="201.6" r="13.0"/>
+<text class="lbl" x="0" y="205.6" font-size="11" text-anchor="middle" font-weight="600">x</text>
+</g>
+<g class="node fam-norm" data-id="n1" data-code="L196">
+<rect class="sh" x="81.0" y="42.0" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="116.0" y="59.9" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="ip" data-code="L118">
+<rect class="sh" x="185.0" y="5.400000000000002" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,26.4)"/>
+<text class="lbl" x="239.0" y="21.3" font-size="12.5" font-weight="600" text-anchor="middle">i proj</text>
+<text class="sub" x="239.0" y="33.8" text-anchor="middle">d → d</text>
+</g>
+<g class="node fam-spk" data-id="gp" data-code="L117">
+<rect class="sh" x="185.0" y="72.60000000000001" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,93.6)"/>
+<text class="lbl" x="239.0" y="88.5" font-size="12.5" font-weight="600" text-anchor="middle">g proj</text>
+<text class="sub" x="239.0" y="101.0" text-anchor="middle">d → d</text>
+</g>
+<g class="node fam-conv" data-id="ci" data-code="L130">
+<rect class="sh" x="306.79999999999995" y="5.400000000000002" width="94" height="34" rx="7"/>
+<text class="lbl" x="353.8" y="21.3" font-size="12.5" font-weight="600" text-anchor="middle">ShortConv</text>
+<text class="sub" x="353.8" y="33.8" text-anchor="middle">k=4, linear</text>
+</g>
+<g class="node fam-conv" data-id="cg" data-code="L129">
+<rect class="sh" x="306.79999999999995" y="72.60000000000001" width="94" height="34" rx="7"/>
+<text class="lbl" x="353.8" y="88.5" font-size="12.5" font-weight="600" text-anchor="middle">ShortConv</text>
+<text class="sub" x="353.8" y="101.0" text-anchor="middle">k=4, linear</text>
+</g>
+<g class="node fam-act" data-id="si" data-code="L137">
+<rect class="sh" x="442.79999999999995" y="8.400000000000002" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="469.8" y="26.2" font-size="11" font-weight="600" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-act" data-id="ls" data-code="L136">
+<rect class="sh" x="442.79999999999995" y="75.60000000000001" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="469.8" y="93.5" font-size="11" font-weight="600" text-anchor="middle">log σ</text>
+</g>
+<g class="node fam-core" data-id="core" data-code="L36-L90,L144">
+<rect class="sh" x="559.8" y="5.399999999999999" width="110" height="101.2" rx="10"/>
+<text class="lbl" x="614.8" y="54.9" font-size="12.5" font-weight="700" text-anchor="middle">HGRN2 scan</text>
+<text class="sub" x="614.8" y="67.4" text-anchor="middle">element-wise</text>
+<path class="loop" d="M632.8,5.399999999999999 C632.8,-20.6 596.8,-20.6 596.8,5.399999999999999" marker-end="url(#i00-hgrn2-m-state)"/>
+<text class="sub looplbl" x="614.8" y="-18.6" text-anchor="middle">h<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+<g class="expand" data-detail="core" tabindex="0" role="button"><title>Open the state-update details</title><rect x="635.8" y="-14.600000000000001" width="64" height="16" rx="8"/><text x="667.8" y="-3.400000000000002" text-anchor="middle">⤢ details</text></g>
+</g>
+<g class="node fam-norm" data-id="onorm" data-code="L158">
+<rect class="sh" x="719.0" y="42.0" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="754.0" y="59.9" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="oproj" data-code="L159">
+<rect class="sh" x="828.8" y="39.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(836.8,60.0)"/>
+<text class="lbl" x="882.8" y="60.4" font-size="12.5" font-weight="600" text-anchor="middle">o proj</text>
+</g>
+<g class="node fam-op" data-id="a1" data-code="L199">
+<circle class="sh" cx="991.8000000000001" cy="201.6" r="14.0"/>
+<text class="lbl" x="991.8000000000001" y="207.0" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-norm" data-id="n2" data-code="L201">
+<title>post-norm residual: the MLP output is added to the normalised stream (x = x + x_mlp after x = norm2(x))</title>
+<rect class="sh" x="1061.1999999999998" y="187.6" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="1096.2" y="205.4" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="fc1" data-code="L173">
+<rect class="sh" x="1165.1999999999998" y="72.60000000000001" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1173.2,93.6)"/>
+<text class="lbl" x="1219.2" y="88.5" font-size="12.5" font-weight="600" text-anchor="middle">fc1</text>
+<text class="sub" x="1219.2" y="101.0" text-anchor="middle">d → 2d</text>
+</g>
+<g class="node fam-act" data-id="gelu" data-code="L174">
+<rect class="sh" x="1295.4" y="75.60000000000001" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="1322.4" y="93.5" font-size="11" font-weight="600" text-anchor="middle">GELU</text>
+</g>
+<g class="node fam-spk" data-id="fc2" data-code="L175">
+<rect class="sh" x="1385.6" y="72.60000000000001" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1393.6,93.6)"/>
+<text class="lbl" x="1439.6" y="88.5" font-size="12.5" font-weight="600" text-anchor="middle">fc2</text>
+<text class="sub" x="1439.6" y="101.0" text-anchor="middle">2d → d</text>
+</g>
+<g class="node fam-op" data-id="a2" data-code="L207">
+<circle class="sh" cx="1548.6" cy="201.6" r="14.0"/>
+<text class="lbl" x="1548.6" y="207.0" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-io" data-id="xout">
+<circle class="sh" cx="1641.4" cy="201.6" r="13.0"/>
+<text class="lbl" x="1641.4" y="205.6" font-size="11" text-anchor="middle" font-weight="600">y</text>
+</g>
+</g>
+<g class="legend">
+<g class="sw fam-spk"><rect class="sh" x="32" y="463.2" width="20" height="14" rx="4"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(35,474.2)"/>
+</g>
+<text x="58" y="474.2">spiking linear: neuron → W (weights see spikes)</text>
+<g class="sw fam-conv"><rect class="sh" x="369.40000000000003" y="463.2" width="20" height="14" rx="4"/>
+</g>
+<text x="395.40000000000003" y="474.2">local conv</text>
+<g class="sw fam-core"><rect class="sh" x="477.40000000000003" y="463.2" width="20" height="14" rx="5"/>
+</g>
+<text x="503.40000000000003" y="474.2">state update</text>
+<rect class="ring" x="597.8000000000001" y="463.2" width="20" height="14" rx="4"/><rect class="sw-nv" x="598.8000000000001" y="464.2" width="18" height="12" rx="4"/>
+<text x="623.8000000000001" y="474.2">evolved</text>
+<path class="e e-data" d="M687.2,470.2 h22"/>
+<text x="715.2" y="474.2">analog current</text>
+<path class="e e-res" d="M822.0,470.2 h22"/>
+<text x="850.0" y="474.2">residual</text>
+<text class="lgnote" x="919.6" y="474.2">spiking neurons: SDN (LIF-type)<tspan class="focus-only">  ·  faded = inherited analog part</tspan></text>
+</g>
+</svg>

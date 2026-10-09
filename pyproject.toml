@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openarchevo"
+version = "0.1.0"
+description = "LLM-driven, surrogate-assisted evolutionary discovery of neural architecture programs (reference implementation)."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Ruoyu Zhao" },
+  { name = "Jiaqi Wu" },
+  { name = "Chenyu Zhu" },
+  { name = "Zhichao Lu" },
+]
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pyyaml>=6.0",
+  "scikit-learn>=1.3",
+  "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+# CodeBLEU code similarity (paper setting). codebleu 0.7 needs this grammar version.
+codebleu = ["codebleu==0.7.0", "tree-sitter-python==0.21.0"]
+# PyTorch models, fingerprint extraction and the surrogate service.
+service = ["torch>=2.4", "fastapi>=0.110", "uvicorn>=0.29", "pydantic>=2", "tabpfn>=6.0"]
+# Proxy training (WikiText-2 / ListOps).
+train = ["torch>=2.4", "datasets>=2.16", "transformers>=4.40"]
+# Extra packages most zoo/ programs import (FLA needs Triton, i.e. a CUDA GPU).
+zoo = ["torch>=2.4", "einops>=0.7", "flash-linear-attention"]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://thuroi0787.github.io/OpenArchEvo/"
+Repository = "https://github.com/THUROI0787/OpenArchEvo"
+Paper = "https://arxiv.org/abs/2609.40258"
+
+[tool.setuptools.packages.find]
+include = ["openarchevo*"]
+
+[tool.setuptools.package-data]
+"openarchevo.llm" = ["templates/*.md"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

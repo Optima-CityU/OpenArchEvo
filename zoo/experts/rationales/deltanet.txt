@@ -1,0 +1,11 @@
+**Problem addressed:** Despite the linear complexity of architectures like DeltaNet, their reliance on dense, continuous-valued matrix multiplications remains a significant source of energy consumption, limiting their deployment on power-constrained edge devices. Spiking Neural Networks (SNNs) present a bio-inspired, energy-efficient alternative by using sparse, event-driven computations. The core challenge lies in adapting a sophisticated recurrent model like DeltaNet to the SNN paradigm without compromising its powerful sequence processing capabilities.
+
+**Key change implemented:** A Hybrid Spiking-Recurrent Architecture. This model strategically replaces the dense linear projections within the DeltaNet framework with SpikingLinear layers, thereby introducing event-driven sparsity into the core dataflow. This conversion is selective, creating a balanced fusion of SNN efficiency and ANN performance.
+
+**Implementation details:**
+- All major linear projection layers (q_proj, k_proj, v_proj, o_proj) are substituted with SpikingLinear modules. These modules first pass inputs through a spiking neuron model, converting them into sparse, binary spike trains before the linear transformation.
+- A pragmatic hybrid ANN-SNN design is adopted: the ShortConvolution layers are intentionally preserved as standard, continuous-valued modules. This allows the model to leverage dense local information for feature extraction while benefiting from sparsity in the global recurrent pathway.
+- The core delta_rule_chunkwise kernel remains in its original form but now operates on representations generated from sparse spike activity, preserving the model's long-range reasoning mechanism.
+- The model is instrumented to track and output spike activity, enabling analysis of sparsity and firing rates.
+
+**Expected impact:** The primary expected outcome is a drastic reduction in computational cost and energy consumption, especially on neuromorphic hardware where zero-valued activations in the sparse spike trains can be skipped (zero-skipping MAC). By strategically retaining ANN components for robust feature extraction, this hybrid model aims to achieve a superior trade-off between energy efficiency and expressive power, making the advanced capabilities of DeltaNet viable for low-power, always-on sequence processing applications.

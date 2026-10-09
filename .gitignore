@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Search runs, training outputs, data and weights (never committed)
+/runs/
+/outputs/
+/data/
+*.pt
+*.pth
+*.ckpt
+*.tabpfn_fit
+*.safetensors
+
+# Local environment
+.env
+.DS_Store
+.idea/
+.vscode/

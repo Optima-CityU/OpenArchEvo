@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1171 439" width="1171" height="439" class="av" data-theme="light">
+
+<defs>
+<marker id="i01-s0885-core-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i01-s0885-core-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i01-s0885-core-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i01-s0885-core-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i01-s0885-core-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i01-s0885-core-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i01-s0885-core-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">HGRN2 recurrence (as implemented)</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">per channel, vector state (no outer-product state expansion); g and i come from spiking projections (LIF → W) + ShortConv; chunkwise in code, shown per token; output = state</text>
+<g transform="translate(71.0,298.8)">
+<path class="e e-data" d="M13.0,-67.2 L112.2,-67.2" marker-end="url(#i01-s0885-core-m-data)"/>
+<path class="e e-data" d="M166.2,-67.2 L264.4,-67.2" marker-end="url(#i01-s0885-core-m-data)"/>
+<path class="e e-data" d="M278.4,-117.4 L278.4,-81.2" marker-end="url(#i01-s0885-core-m-data)"/>
+<path class="e e-data" d="M292.4,-67.2 L403.6,-67.2" marker-end="url(#i01-s0885-core-m-data)"/>
+<path class="e e-data" d="M13.0,11.2 L408.6,11.2 Q417.6,11.2 417.6,2.2 L417.6,-53.2" marker-end="url(#i01-s0885-core-m-data)"/>
+<path class="e e-data" d="M431.6,-67.2 L509.8,-67.2" marker-end="url(#i01-s0885-core-m-data)"/>
+<path class="e e-data" d="M603.8,-67.2 L752.6,-67.2" marker-end="url(#i01-s0885-core-m-data)"/>
+<path class="e e-state" d="M556.8,-84.2 L556.8,-175.8 Q556.8,-184.8 547.8,-184.8 L287.4,-184.8 Q278.4,-184.8 278.4,-175.8 L278.4,-151.4" marker-end="url(#i01-s0885-core-m-state)"/>
+<text class="elbl k-state" x="417.6" y="-189.8" text-anchor="middle">next token</text>
+<g class="node fam-io novel from-spk" data-id="g">
+<title>log-decay scaled by two spike-driven per-head modulators</title>
+<circle class="ring" cx="0" cy="-67.2" r="17.0"/>
+<circle class="spkring" cx="0" cy="-67.2" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,-63.7)"/>
+<circle class="sh" cx="0" cy="-67.2" r="13.0"/>
+<text class="lbl" x="0" y="-63.2" font-size="11" text-anchor="middle" font-weight="600">g</text>
+<g class="badge"><circle cx="11.0" cy="-82.2" r="8"/><text x="11.0" y="-78.7" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-io novel from-spk" data-id="i">
+<title>input scaled by a spike-driven per-head gate</title>
+<circle class="ring" cx="0" cy="11.200000000000001" r="17.0"/>
+<circle class="spkring" cx="0" cy="11.200000000000001" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,14.7)"/>
+<circle class="sh" cx="0" cy="11.200000000000001" r="13.0"/>
+<text class="lbl" x="0" y="15.2" font-size="11" text-anchor="middle" font-weight="600">i</text>
+<g class="badge"><circle cx="11.0" cy="-3.799999999999999" r="8"/><text x="11.0" y="-0.29999999999999893" text-anchor="middle">2</text></g>
+</g>
+<g class="node fam-act" data-id="ex" data-code="L86-L98">
+<rect class="sh" x="112.19999999999999" y="-81.2" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="139.2" y="-63.4" font-size="11" font-weight="600" text-anchor="middle">exp</text>
+</g>
+<g class="node fam-state" data-id="hp">
+<rect class="sh" x="231.39999999999998" y="-151.4" width="94" height="34" rx="10"/>
+<text class="lbl" x="278.4" y="-135.5" font-size="12.5" font-weight="600" text-anchor="middle">h<tspan dy="3.5" font-size="72%">t-1</tspan><tspan dy="-3.5">​</tspan></text>
+<text class="sub" x="278.4" y="-123.0" text-anchor="middle">per channel</text>
+</g>
+<g class="node fam-op" data-id="dm" data-code="L82-L99">
+<circle class="sh" cx="278.4" cy="-67.2" r="14.0"/>
+<text class="lbl" x="278.4" y="-61.8" font-size="15" text-anchor="middle" font-weight="600">×</text>
+<text class="sub" x="288.1" y="-42.2" text-anchor="start">decay</text>
+</g>
+<g class="node fam-op" data-id="upd" data-code="L82-L99">
+<circle class="sh" cx="417.6" cy="-67.2" r="14.0"/>
+<text class="lbl" x="417.6" y="-61.8" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-state" data-id="h">
+<rect class="sh" x="509.79999999999995" y="-84.2" width="94" height="34" rx="10"/>
+<text class="lbl" x="556.8" y="-62.8" font-size="12.5" font-weight="600" text-anchor="middle">h<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-io" data-id="o">
+<circle class="sh" cx="765.5999999999999" cy="-67.2" r="13.0"/>
+<text class="lbl" x="765.5999999999999" y="-63.2" font-size="11" text-anchor="middle" font-weight="600">o</text>
+</g>
+</g>
+<text class="eq" x="32" y="361.0" style="white-space:pre" xml:space="preserve">h<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = exp(g<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>) ⊙ h<tspan dy="3.5" font-size="72%">t-1</tspan><tspan dy="-3.5">​</tspan> + i<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>,  o<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = h<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+<text class="eq" x="32" y="381.0" style="white-space:pre" xml:space="preserve">g = γ<tspan dy="3.5" font-size="72%">h</tspan><tspan dy="-3.5">​</tspan>(1+m<tspan dy="3.5" font-size="72%">d</tspan><tspan dy="-3.5">​</tspan>)(1+m<tspan dy="3.5" font-size="72%">c</tspan><tspan dy="-3.5">​</tspan>)·logσ(g̃),   i = m<tspan dy="3.5" font-size="72%">i</tspan><tspan dy="-3.5">​</tspan>·SiLU(ĩ),   then o ← o ⊙ m<tspan dy="3.5" font-size="72%">o</tspan><tspan dy="-3.5">​</tspan></text>
+<g class="legend">
+<g class="sw fam-state"><rect class="sh" x="32" y="412.0" width="20" height="14" rx="5"/>
+</g>
+<text x="58" y="423.0">state tensor</text>
+<g class="sw fam-io from-spk"><circle class="spkring" cx="171.4" cy="419.0" r="7"/><circle class="sh" cx="171.4" cy="419.0" r="4.6"/><path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="scale(0.85) translate(179.3,497.1)"/></g>
+<text x="184.4" y="423.0">input from a spiking projection</text>
+<rect class="ring" x="396.6" y="412.0" width="20" height="14" rx="4"/><rect class="sw-nv" x="397.6" y="413.0" width="18" height="12" rx="4"/>
+<text x="422.6" y="423.0">evolved</text>
+<path class="e e-data" d="M486.0,419.0 h22"/>
+<text x="514.0" y="423.0">analog current</text>
+<path class="e e-state" d="M620.8,419.0 h22"/>
+<text x="648.8" y="423.0">state carry</text>
+</g>
+</svg>

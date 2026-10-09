@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1724 614" width="1724" height="614" class="av" data-theme="light">
+
+<defs>
+<marker id="i00-deltaformer-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-deltaformer-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-deltaformer-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-deltaformer-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-deltaformer-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i00-deltaformer-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i00-deltaformer-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">Spiking DeltaFormer</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">Iteration 0  ·  initial expert (model zoo)</text>
+<g class="chip spk"><rect x="32" y="82" width="126" height="24" rx="12"/><text x="95" y="98" text-anchor="middle">9 spiking sites</text></g>
+<g transform="translate(53.0,260.2)">
+<rect class="panel " x="167.0" y="-124.2" width="739.0" height="372.0" rx="14"/>
+<text class="cap" x="181.0" y="-107.2">Token mixer<tspan class="capsub" dx="8">Spiking DeltaFormer</tspan></text>
+<rect class="panel " x="1124.0" y="83.0" width="350.4" height="92.0" rx="14"/>
+<text class="cap" x="1138.0" y="100.0">Channel mixer<tspan class="capsub" dx="8">Spiking MLP (GELU)</tspan></text>
+<path class="e e-res" d="M13.0,280.0 L954.6,280.0" marker-end="url(#i00-deltaformer-m-res)"/>
+<path class="e e-res" d="M1539.4,280.0 L1605.2,280.0" marker-end="url(#i00-deltaformer-m-res)"/>
+<path class="e e-res" d="M982.6,280.0 L1038.0,280.0" marker-end="url(#i00-deltaformer-m-res)"/>
+<path class="e e-res" d="M1108.0,280.0 L1511.4,280.0" marker-end="url(#i00-deltaformer-m-res)"/>
+<path class="e e-data" d="M13.0,280.0 L49.0,280.0 Q58.0,280.0 58.0,271.0 L58.0,93.0 Q58.0,84.0 67.0,84.0 L81.0,84.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,75.0 L174.0,5.5 Q174.0,0.0 179.5,0.0 L185.0,0.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,75.0 L174.0,55.9 Q174.0,50.4 179.5,50.4 L185.0,50.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.6,84.0 Q174.0,84.0 174.0,92.4 L174.0,95.3 Q174.0,100.8 179.5,100.8 L185.0,100.8" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M279.0,0.0 L315.0,0.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M279.0,50.4 L315.0,50.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M381.0,0.0 L437.0,0.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M381.0,50.4 L437.0,50.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M279.0,100.8 L437.0,100.8" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,93.0 L174.0,156.9 Q174.0,162.4 179.5,162.4 L185.0,162.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,93.0 L174.0,207.3 Q174.0,212.8 179.5,212.8 L185.0,212.8" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M279.0,162.4 L321.0,162.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M279.0,212.8 L321.0,212.8" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M375.0,162.4 L466.6,162.4 Q475.6,162.4 475.6,153.4 L475.6,117.8" marker-end="url(#i00-deltaformer-m-data)"/>
+<text class="elbl k-data" x="425.3" y="157.4" text-anchor="middle">β</text>
+<path class="e e-data" d="M375.0,212.8 L507.2,212.8 Q516.2,212.8 516.2,203.8 L516.2,117.8" marker-end="url(#i00-deltaformer-m-data)"/>
+<text class="elbl k-data" x="445.6" y="207.8" text-anchor="middle">γ</text>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,75.0 L174.0,-61.7 Q174.0,-67.2 179.5,-67.2 L185.0,-67.2" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M279.0,-67.2 L593.6,-67.2" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M549.0,50.4 L585.6,50.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M655.6,50.4 L711.0,50.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M647.6,-67.2 L716.0,-67.2 Q725.0,-67.2 725.0,-58.2 L725.0,36.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M739.0,50.4 L794.0,50.4" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M888.0,50.4 L959.6,50.4 Q968.6,50.4 968.6,59.4 L968.6,266.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M1456.4,140.0 L1516.4,140.0 Q1525.4,140.0 1525.4,149.0 L1525.4,266.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M1236.0,140.0 L1272.2,140.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M1326.2,140.0 L1362.4,140.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<path class="e e-data" d="M1073.0,266.0 L1073.0,149.0 Q1073.0,140.0 1082.0,140.0 L1142.0,140.0" marker-end="url(#i00-deltaformer-m-data)"/>
+<g class="node fam-norm" data-id="n1" data-code="L221">
+<rect class="sh" x="81.0" y="70.0" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="116.0" y="87.8" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="q" data-code="L140">
+<rect class="sh" x="185.0" y="-17.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,4.0)"/>
+<text class="lbl" x="239.0" y="-1.1" font-size="12.5" font-weight="600" text-anchor="middle">q proj</text>
+<text class="sub" x="239.0" y="11.4" text-anchor="middle">d → d<tspan dy="3.5" font-size="72%">k</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-spk" data-id="k" data-code="L141">
+<rect class="sh" x="185.0" y="33.4" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,54.4)"/>
+<text class="lbl" x="239.0" y="49.3" font-size="12.5" font-weight="600" text-anchor="middle">k proj</text>
+<text class="sub" x="239.0" y="61.8" text-anchor="middle">d → d<tspan dy="3.5" font-size="72%">k</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-spk" data-id="v" data-code="L142">
+<rect class="sh" x="185.0" y="83.8" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,104.8)"/>
+<text class="lbl" x="239.0" y="99.7" font-size="12.5" font-weight="600" text-anchor="middle">v proj</text>
+<text class="sub" x="239.0" y="112.2" text-anchor="middle">d → d<tspan dy="3.5" font-size="72%">v</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-act" data-id="l2q" data-code="L52-L53">
+<rect class="sh" x="315.0" y="-14.0" width="66" height="28" rx="14.0"/>
+<text class="lbl" x="348.0" y="3.8" font-size="11" font-weight="600" text-anchor="middle">L2 norm</text>
+</g>
+<g class="node fam-act" data-id="l2k" data-code="L52-L53">
+<rect class="sh" x="315.0" y="36.4" width="66" height="28" rx="14.0"/>
+<text class="lbl" x="348.0" y="54.2" font-size="11" font-weight="600" text-anchor="middle">L2 norm</text>
+</g>
+<g class="node fam-spk" data-id="bp" data-code="L143">
+<rect class="sh" x="185.0" y="145.4" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,166.4)"/>
+<text class="lbl" x="239.0" y="161.3" font-size="12.5" font-weight="600" text-anchor="middle">β proj</text>
+<text class="sub" x="239.0" y="173.8" text-anchor="middle">d → H</text>
+</g>
+<g class="node fam-act" data-id="bs" data-code="L153">
+<rect class="sh" x="321.0" y="148.4" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="348.0" y="166.2" font-size="11" font-weight="600" text-anchor="middle">½·σ</text>
+</g>
+<g class="node fam-spk" data-id="wp" data-code="L144">
+<rect class="sh" x="185.0" y="195.79999999999998" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,216.8)"/>
+<text class="lbl" x="239.0" y="211.7" font-size="12.5" font-weight="600" text-anchor="middle">w proj</text>
+<text class="sub" x="239.0" y="224.2" text-anchor="middle">d → H</text>
+</g>
+<g class="node fam-act" data-id="ws" data-code="L155">
+<rect class="sh" x="321.0" y="198.79999999999998" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="348.0" y="216.6" font-size="11" font-weight="600" text-anchor="middle">σ</text>
+</g>
+<g class="node fam-spk" data-id="gp" data-code="L145">
+<rect class="sh" x="185.0" y="-84.2" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,-63.2)"/>
+<text class="lbl" x="239.0" y="-68.3" font-size="12.5" font-weight="600" text-anchor="middle">g proj</text>
+<text class="sub" x="239.0" y="-55.8" text-anchor="middle">d → d<tspan dy="3.5" font-size="72%">v</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-core" data-id="core" data-code="L36-L101">
+<rect class="sh" x="437.0" y="-17.000000000000007" width="112" height="134.8" rx="10"/>
+<text class="lbl" x="493.0" y="49.3" font-size="12.5" font-weight="700" text-anchor="middle">Delta rule</text>
+<text class="sub" x="493.0" y="61.8" text-anchor="middle">+ decay γ</text>
+<path class="loop" d="M511.0,-17.000000000000007 C511.0,-43.00000000000001 475.0,-43.00000000000001 475.0,-17.000000000000007" marker-end="url(#i00-deltaformer-m-state)"/>
+<text class="sub looplbl" x="493.0" y="-41.00000000000001" text-anchor="middle">S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+<g class="expand" data-detail="core" tabindex="0" role="button"><title>Open the state-update details</title><rect x="515.0" y="-37.00000000000001" width="64" height="16" rx="8"/><text x="547.0" y="-25.800000000000008" text-anchor="middle">⤢ details</text></g>
+</g>
+<g class="node fam-norm" data-id="onorm" data-code="L177">
+<rect class="sh" x="585.5999999999999" y="36.4" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="620.6" y="54.2" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-act" data-id="gs" data-code="L156">
+<rect class="sh" x="593.5999999999999" y="-81.2" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="620.6" y="-63.4" font-size="11" font-weight="600" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-op" data-id="gm" data-code="L180">
+<circle class="sh" cx="725.0" cy="50.4" r="14.0"/>
+<text class="lbl" x="725.0" y="55.8" font-size="15" text-anchor="middle" font-weight="600">×</text>
+</g>
+<g class="node fam-spk" data-id="oproj" data-code="L183">
+<rect class="sh" x="794.0" y="33.4" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(802.0,54.4)"/>
+<text class="lbl" x="848.0" y="54.8" font-size="12.5" font-weight="600" text-anchor="middle">o proj</text>
+</g>
+<g class="node fam-io" data-id="xin">
+<circle class="sh" cx="0" cy="280.0" r="13.0"/>
+<text class="lbl" x="0" y="284.0" font-size="11" text-anchor="middle" font-weight="600">x</text>
+</g>
+<g class="node fam-op" data-id="a1" data-code="L224">
+<circle class="sh" cx="968.5999999999999" cy="280.0" r="14.0"/>
+<text class="lbl" x="968.5999999999999" y="285.4" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-norm" data-id="n2" data-code="L226">
+<title>post-norm residual: the MLP output is added to the normalised stream (x = x + x_mlp after x = norm2(x))</title>
+<rect class="sh" x="1038.0" y="266.0" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="1073.0" y="283.9" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="fc1" data-code="L198">
+<rect class="sh" x="1142.0" y="123.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1150.0,144.0)"/>
+<text class="lbl" x="1196.0" y="138.9" font-size="12.5" font-weight="600" text-anchor="middle">fc1</text>
+<text class="sub" x="1196.0" y="151.4" text-anchor="middle">d → 2d</text>
+</g>
+<g class="node fam-act" data-id="gelu" data-code="L199">
+<rect class="sh" x="1272.1999999999998" y="126.0" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="1299.2" y="143.8" font-size="11" font-weight="600" text-anchor="middle">GELU</text>
+</g>
+<g class="node fam-spk" data-id="fc2" data-code="L200">
+<rect class="sh" x="1362.4" y="123.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1370.4,144.0)"/>
+<text class="lbl" x="1416.4" y="138.9" font-size="12.5" font-weight="600" text-anchor="middle">fc2</text>
+<text class="sub" x="1416.4" y="151.4" text-anchor="middle">2d → d</text>
+</g>
+<g class="node fam-op" data-id="a2" data-code="L232">
+<circle class="sh" cx="1525.4" cy="280.0" r="14.0"/>
+<text class="lbl" x="1525.4" y="285.4" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-io" data-id="xout">
+<circle class="sh" cx="1618.1999999999998" cy="280.0" r="13.0"/>
+<text class="lbl" x="1618.1999999999998" y="284.0" font-size="11" text-anchor="middle" font-weight="600">y</text>
+</g>
+</g>
+<g class="legend">
+<g class="sw fam-spk"><rect class="sh" x="32" y="587.2" width="20" height="14" rx="4"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(35,598.2)"/>
+</g>
+<text x="58" y="598.2">spiking linear: neuron → W (weights see spikes)</text>
+<g class="sw fam-core"><rect class="sh" x="369.40000000000003" y="587.2" width="20" height="14" rx="5"/>
+</g>
+<text x="395.40000000000003" y="598.2">state update</text>
+<rect class="ring" x="489.80000000000007" y="587.2" width="20" height="14" rx="4"/><rect class="sw-nv" x="490.80000000000007" y="588.2" width="18" height="12" rx="4"/>
+<text x="515.8000000000001" y="598.2">evolved</text>
+<path class="e e-data" d="M579.2,594.2 h22"/>
+<text x="607.2" y="598.2">analog current</text>
+<path class="e e-res" d="M714.0,594.2 h22"/>
+<text x="742.0" y="598.2">residual</text>
+<text class="lgnote" x="811.6" y="598.2">spiking neurons: SDN (LIF-type)<tspan class="focus-only">  ·  faded = inherited analog part</tspan></text>
+</g>
+</svg>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery · OpenArchEvo</title>
+<meta name="description" content="All 171 trained OpenArchEvo architectures as block-diagram thumbnails: filter by iteration, sort by fitness, perplexity, accuracy or firing rate.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>try{var t=localStorage.getItem('oae-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-site-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script type="module" src="js/gallery.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the gallery</a>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./" data-logo>OpenArchEvo</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="./#evolution">Evolution</a>
+      <a href="./#method">Method</a>
+      <a href="./#representation">Representation</a>
+      <a href="./#inner">Inner loop</a>
+      <a href="./#results">Results</a>
+      <a href="./#explorer">Architectures</a>
+      <a href="gallery.html" aria-current="page" class="on">Gallery</a>
+      <a href="./#cite">Cite</a>
+    </nav>
+    <div class="tools">
+      <a class="iconbtn" data-code-link href="#" aria-label="Code on GitHub" title="Code on GitHub"></a>
+      <button class="iconbtn" data-theme-toggle aria-label="Toggle theme"></button>
+    </div>
+  </div>
+  <nav class="mnav" aria-label="Sections (compact)">
+    <a href="./">Home</a><a href="./#evolution">Evolution</a><a href="./#results">Results</a><a href="./#explorer">Architectures</a><a href="gallery.html" class="on" aria-current="page">Gallery</a>
+  </nav>
+</header>
+<main id="main" class="wrap">
+  <div class="g-head">
+    <div class="crumbs"><a href="./">OpenArchEvo</a><span>/</span><span>Gallery</span></div>
+    <h1>The architecture zoo, at a glance</h1>
+    <p class="lede">All 171 trained architectures: 20 initial experts and 151 found by the search. Each card shows the token mixer, with evolved blocks marked in terracotta; open a card for the full diagram, code and metrics.</p>
+  </div>
+  <div class="filters g-filters" role="search">
+    <select aria-label="Iteration" data-gi></select>
+    <select aria-label="Sort" data-gs>
+      <option value="fit">Sort: fitness</option>
+      <option value="wt2">Sort: WT2 PPL</option>
+      <option value="listops">Sort: ListOps</option>
+      <option value="iter">Sort: iteration</option>
+      <option value="fr">Sort: lowest fire rate</option>
+    </select>
+    <span class="count" data-gc aria-live="polite"></span>
+  </div>
+  <div class="gallery" data-grid></div>
+  <p class="note" style="margin-top:22px">Fitness combines WT2 PPL and ListOps accuracy from the search proxies (paper formula; the SpikingDeltaNet expert scores 0.500). See “About the data” on the <a href="./#evolution">project page</a>.</p>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <span>OpenArchEvo · Zhao, Wu, Zhu, Lu · 2026</span>
+    <span><a href="./">Project page</a> · <a href="https://arxiv.org/abs/2609.40258">arXiv</a></span>
+  </div>
+</footer>
+</body>
+</html>

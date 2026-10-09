@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1046 390" width="1046" height="390" class="av" data-theme="light">
+
+<defs>
+<marker id="i08-s0414-s4-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i08-s0414-s4-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i08-s0414-s4-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i08-s0414-s4-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i08-s0414-s4-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i08-s0414-s4-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i08-s0414-s4-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">S4D state path (spike-gated, spiking-MLP readout)</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">diagonal complex SSM as a causal FFT long convolution; the analog output is masked by input spikes, then spiked inside a 2-layer spiking MLP</text>
+<g transform="translate(53.0,184.2)">
+<path class="e e-data" d="M13.0,0.0 L102.8,0.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data" d="M150.8,-50.2 L150.8,-17.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data" d="M198.8,0.0 L287.6,0.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data" d="M315.6,0.0 L392.0,0.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data" d="M420.0,0.0 L508.0,0.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data" d="M0.0,13.0 L0.0,30.2 Q0.0,39.2 9.0,39.2 L292.6,39.2 Q301.6,39.2 301.6,30.2 L301.6,14.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data nv" d="M0.0,13.0 L0.0,63.8 Q0.0,72.8 9.0,72.8 L376.0,72.8" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data nv" d="M536.0,0.0 L602.6,0.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-data nv" d="M696.6,0.0 L765.0,0.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<text class="elbl k-data" x="730.8" y="-5.0" text-anchor="middle">analog</text>
+<path class="e e-data" d="M859.0,0.0 L926.6,0.0" marker-end="url(#i08-s0414-s4-m-data)"/>
+<path class="e e-spk" d="M436.0,72.8 L513.0,72.8 Q522.0,72.8 522.0,63.8 L522.0,14.0" marker-end="url(#i08-s0414-s4-m-spk)"/>
+<text class="elbl k-spk" x="479.0" y="67.8" text-anchor="middle">spikes</text>
+<g class="node fam-io" data-id="u">
+<circle class="sh" cx="0" cy="0" r="13.0"/>
+<text class="lbl" x="0" y="4.0" font-size="11" text-anchor="middle" font-weight="600">u</text>
+</g>
+<g class="node fam-param" data-id="K" data-code="L66-L74">
+<rect class="sh" x="85.80000000000001" y="-84.2" width="130" height="34" rx="7"/>
+<text class="lbl" x="150.8" y="-68.3" font-size="12.5" font-weight="600" text-anchor="middle">S4D kernel</text>
+<text class="sub" x="150.8" y="-55.8" text-anchor="middle">K<tspan dy="3.5" font-size="72%">ℓ</tspan><tspan dy="-3.5">​</tspan> = C̃·e<tspan dy="-5" font-size="72%">ℓΔA</tspan><tspan dy="5">​</tspan></text>
+</g>
+<g class="node fam-core" data-id="fft" data-code="L142-L146">
+<rect class="sh" x="102.80000000000001" y="-17.0" width="96" height="34" rx="10"/>
+<text class="lbl" x="150.8" y="-1.1" font-size="12.5" font-weight="700" text-anchor="middle">FFT conv</text>
+<text class="sub" x="150.8" y="11.4" text-anchor="middle">y = K * u</text>
+</g>
+<g class="node fam-op" data-id="dsk" data-code="L147-L149">
+<circle class="sh" cx="301.6" cy="0" r="14.0"/>
+<text class="lbl" x="301.6" y="5.4" font-size="15" text-anchor="middle" font-weight="600">+</text>
+<text class="sub" x="311.3" y="25.0" text-anchor="start">+ D·u</text>
+</g>
+<g class="node fam-op" data-id="vth" data-code="L152-L154">
+<circle class="sh" cx="406.0" cy="0" r="14.0"/>
+<text class="lbl" x="406.0" y="5.4" font-size="15" text-anchor="middle" font-weight="600">÷</text>
+<text class="sub" x="415.7" y="25.0" text-anchor="start">e<tspan dy="-5" font-size="72%">θ</tspan><tspan dy="5">​</tspan></text>
+</g>
+<g class="node fam-neuron novel" data-id="gl" data-code="L159-L164">
+<title>gate_proj&#x27;s neuron; its Linear output is discarded</title>
+<rect class="glow" x="376.0" y="55.8" width="60" height="34" rx="9"/>
+<rect class="ring" x="372.0" y="51.8" width="68" height="42" rx="21.0"/>
+<rect class="sh" x="376.0" y="55.8" width="60" height="34" rx="17.0"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(384.0,76.8)"/>
+<text class="lbl" x="413.0" y="77.2" font-size="12.5" font-weight="600" text-anchor="middle">LIF</text>
+<g class="badge"><circle cx="434.0" cy="53.8" r="8"/><text x="434.0" y="57.3" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-op novel" data-id="gm" data-code="L167">
+<circle class="ring" cx="522.0" cy="0" r="18.0"/>
+<circle class="sh" cx="522.0" cy="0" r="14.0"/>
+<text class="lbl" x="522.0" y="5.4" font-size="15" text-anchor="middle" font-weight="600">×</text>
+<g class="badge"><circle cx="536.0" cy="-14.0" r="8"/><text x="536.0" y="-10.5" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-spk novel" data-id="m1" data-code="L112-L115,L174">
+<rect class="glow" x="602.5999999999999" y="-17.0" width="94" height="34" rx="9"/>
+<rect class="ring" x="598.5999999999999" y="-21.0" width="102" height="42" rx="11"/>
+<rect class="sh" x="602.5999999999999" y="-17.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(610.6,4.0)"/>
+<text class="lbl" x="656.6" y="-1.1" font-size="12.5" font-weight="600" text-anchor="middle">MLP up</text>
+<text class="sub" x="656.6" y="11.4" text-anchor="middle">d → 2d</text>
+<g class="badge"><circle cx="694.5999999999999" cy="-19.0" r="8"/><text x="694.5999999999999" y="-15.5" text-anchor="middle">2</text></g>
+</g>
+<g class="node fam-spk novel" data-id="m2" data-code="L119-L122,L179">
+<rect class="glow" x="765.0" y="-17.0" width="94" height="34" rx="9"/>
+<rect class="ring" x="761.0" y="-21.0" width="102" height="42" rx="11"/>
+<rect class="sh" x="765.0" y="-17.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(773.0,4.0)"/>
+<text class="lbl" x="819.0" y="-1.1" font-size="12.5" font-weight="600" text-anchor="middle">MLP down</text>
+<text class="sub" x="819.0" y="11.4" text-anchor="middle">2d → d</text>
+<g class="badge"><circle cx="857.0" cy="-19.0" r="8"/><text x="857.0" y="-15.5" text-anchor="middle">2</text></g>
+</g>
+<g class="node fam-io" data-id="y">
+<circle class="sh" cx="939.5999999999999" cy="0" r="13.0"/>
+<text class="lbl" x="939.5999999999999" y="4.0" font-size="11" text-anchor="middle" font-weight="600">y</text>
+</g>
+</g>
+<text class="eq" x="32" y="312.0" style="white-space:pre" xml:space="preserve">y = (K * u + D·u) / e<tspan dy="-5" font-size="72%">θ</tspan><tspan dy="5">​</tspan>,   ỹ = y ⊙ LIF(u),   out = W<tspan dy="3.5" font-size="72%">2</tspan><tspan dy="-3.5">​</tspan>·LIF(W<tspan dy="3.5" font-size="72%">1</tspan><tspan dy="-3.5">​</tspan>·LIF(ỹ))</text>
+<text class="eq" x="32" y="332.0" style="white-space:pre" xml:space="preserve">K<tspan dy="3.5" font-size="72%">ℓ</tspan><tspan dy="-3.5">​</tspan> = 2·Re[C̃·e<tspan dy="-5" font-size="72%">ℓΔA</tspan><tspan dy="5">​</tspan>]  ≡  h<tspan dy="3.5" font-size="72%">ℓ</tspan><tspan dy="-3.5">​</tspan> = e<tspan dy="-5" font-size="72%">ΔA</tspan><tspan dy="5">​</tspan>·h<tspan dy="3.5" font-size="72%">ℓ−1</tspan><tspan dy="-3.5">​</tspan> + u<tspan dy="3.5" font-size="72%">ℓ</tspan><tspan dy="-3.5">​</tspan></text>
+<g class="legend">
+<g class="sw fam-spk"><rect class="sh" x="32" y="363.0" width="20" height="14" rx="4"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(35,374.0)"/>
+</g>
+<text x="58" y="374.0">spiking linear</text>
+<g class="sw fam-neuron"><rect class="sh" x="164.8" y="363.0" width="20" height="14" rx="7"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(167.8,374.0)"/>
+</g>
+<text x="190.8" y="374.0">spiking neuron</text>
+<g class="sw fam-core"><rect class="sh" x="297.6" y="363.0" width="20" height="14" rx="5"/>
+</g>
+<text x="323.6" y="374.0">state update</text>
+<g class="sw fam-param"><rect class="sh" x="418.0" y="363.0" width="20" height="14" rx="4"/>
+</g>
+<text x="444.0" y="374.0">parameter</text>
+<rect class="ring" x="519.8" y="363.0" width="20" height="14" rx="4"/><rect class="sw-nv" x="520.8" y="364.0" width="18" height="12" rx="4"/>
+<text x="545.8" y="374.0">evolved</text>
+<path class="e e-data" d="M609.1999999999999,370.0 h22"/>
+<text x="637.1999999999999" y="374.0">analog current</text>
+<path class="e e-spk" d="M743.9999999999999,370.0 h22"/>
+<text x="771.9999999999999" y="374.0">spike train</text>
+</g>
+</svg>

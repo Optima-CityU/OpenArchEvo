@@ -1,0 +1,30 @@
+# Search-time proxy training on ListOps (LRA), one third of the training split.
+# This is the SpikingSSM-consistent proxy config used in the search: SDN spiking neurons and
+# pre-norm spiking blocks as in SpikingSSM (Shen et al., AAAI 2025), with the hyperparameters of
+# the original proxy-training scripts. See docs/pipeline.md (Proxy training).
+# Search fitness uses test accuracy of the checkpoint with the best validation accuracy.
+task: listops
+data_dir: ./data/listops             # LRA basic_{train,val,test}.tsv
+cache_dir: ./data/cache
+subset_fraction: 0.3333333333333333  # train/val: shuffle(seed=42), keep the first int(N/3)
+subset_seed: 42                      # the test split is always used in full
+
+model:
+  n_layers: 2
+  d_model: 128
+  num_heads: 4
+  d_ffn_mult: 2
+  dropout: 0.1
+  neuron_type: sdn
+
+optim:
+  epochs: 25
+  batch_size: 32
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  betas: [0.9, 0.95]
+  warmup_steps: 3000
+  grad_clip: 2.0
+
+num_workers: 4
+seed: null

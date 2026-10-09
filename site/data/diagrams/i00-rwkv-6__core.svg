@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 977 641" width="977" height="641" class="av" data-theme="light">
+
+<defs>
+<marker id="i00-rwkv-6-core-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-rwkv-6-core-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-rwkv-6-core-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-rwkv-6-core-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-rwkv-6-core-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i00-rwkv-6-core-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i00-rwkv-6-core-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">RWKV-6 WKV state update (as implemented)</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">per head; data-dependent per-channel decay w from a spiking projection; r, k, v spiking; chunkwise in code, shown per token</text>
+<g transform="translate(77.6,298.8)">
+<path class="e e-data" d="M13.0,-67.2 L95.8,-67.2" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M205.8,-67.2 L287.6,-67.2" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M301.6,-117.4 L301.6,-81.2" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M315.6,-67.2 L438.4,-67.2" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M13.0,0.0 L287.6,0.0" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M13.0,67.2 L292.6,67.2 Q301.6,67.2 301.6,58.2 L301.6,14.0" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M315.6,0.0 L443.4,0.0 Q452.4,0.0 452.4,-9.0 L452.4,-53.2" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M466.4,-67.2 L544.6,-67.2" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M591.6,-50.2 L591.6,120.4" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M13.0,134.4 L577.6,134.4" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M605.6,134.4 L716.8,134.4" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M72.4,229.6 L397.4,229.6" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M507.4,229.6 L721.8,229.6 Q730.8,229.6 730.8,220.6 L730.8,148.4" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M744.8,134.4 L833.8,134.4" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M406.0,195.0 L406.0,212.6" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M452.4,195.0 L452.4,212.6" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-data" d="M498.8,195.0 L498.8,212.6" marker-end="url(#i00-rwkv-6-core-m-data)"/>
+<path class="e e-state" d="M591.6,-84.2 L591.6,-175.8 Q591.6,-184.8 582.6,-184.8 L310.6,-184.8 Q301.6,-184.8 301.6,-175.8 L301.6,-151.4" marker-end="url(#i00-rwkv-6-core-m-state)"/>
+<text class="elbl k-state" x="446.6" y="-189.8" text-anchor="middle">next token</text>
+<g class="node fam-io from-spk" data-id="w">
+<circle class="spkring" cx="0" cy="-67.2" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,-63.7)"/>
+<circle class="sh" cx="0" cy="-67.2" r="13.0"/>
+<text class="lbl" x="0" y="-63.2" font-size="11" text-anchor="middle" font-weight="600">ŵ</text>
+</g>
+<g class="node fam-io from-spk" data-id="k">
+<circle class="spkring" cx="0" cy="0" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,3.5)"/>
+<circle class="sh" cx="0" cy="0" r="13.0"/>
+<text class="lbl" x="0" y="4.0" font-size="11" text-anchor="middle" font-weight="600">k</text>
+</g>
+<g class="node fam-io from-spk" data-id="v">
+<circle class="spkring" cx="0" cy="67.2" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,70.7)"/>
+<circle class="sh" cx="0" cy="67.2" r="13.0"/>
+<text class="lbl" x="0" y="71.2" font-size="11" text-anchor="middle" font-weight="600">v</text>
+</g>
+<g class="node fam-io from-spk" data-id="r">
+<circle class="spkring" cx="0" cy="134.4" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(-28.5,137.9)"/>
+<circle class="sh" cx="0" cy="134.4" r="13.0"/>
+<text class="lbl" x="0" y="138.4" font-size="11" text-anchor="middle" font-weight="600">r</text>
+</g>
+<g class="node fam-param" data-id="u" data-code="L181">
+<rect class="sh" x="-37.6" y="212.59999999999997" width="110" height="34" rx="7"/>
+<text class="lbl" x="17.4" y="228.5" font-size="12.5" font-weight="600" text-anchor="middle">u</text>
+<text class="sub" x="17.4" y="241.0" text-anchor="middle">bonus, per head</text>
+</g>
+<g class="node fam-act" data-id="dec" data-code="L49">
+<rect class="sh" x="95.80000000000001" y="-81.2" width="110" height="28" rx="14.0"/>
+<text class="lbl" x="150.8" y="-63.4" font-size="11" font-weight="600" text-anchor="middle">exp(−softplus)</text>
+</g>
+<g class="node fam-state" data-id="Sp">
+<rect class="sh" x="254.60000000000002" y="-151.4" width="94" height="34" rx="10"/>
+<text class="lbl" x="301.6" y="-135.5" font-size="12.5" font-weight="600" text-anchor="middle">S<tspan dy="3.5" font-size="72%">t-1</tspan><tspan dy="-3.5">​</tspan></text>
+<text class="sub" x="301.6" y="-123.0" text-anchor="middle">d<tspan dy="3.5" font-size="72%">k</tspan><tspan dy="-3.5">​</tspan> × d<tspan dy="3.5" font-size="72%">v</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-op" data-id="dm" data-code="L130,L137">
+<circle class="sh" cx="301.6" cy="-67.2" r="14.0"/>
+<text class="lbl" x="301.6" y="-61.8" font-size="15" text-anchor="middle" font-weight="600">⊙</text>
+<text class="sub" x="311.3" y="-42.2" text-anchor="start">diag(w)</text>
+</g>
+<g class="node fam-op" data-id="outer" data-code="L131-L135">
+<circle class="sh" cx="301.6" cy="0" r="14.0"/>
+<text class="lbl" x="301.6" y="5.4" font-size="15" text-anchor="middle" font-weight="600">⊗</text>
+<text class="sub" x="311.3" y="25.0" text-anchor="start">kᵀ v</text>
+</g>
+<g class="node fam-op" data-id="upd" data-code="L137">
+<circle class="sh" cx="452.4" cy="-67.2" r="14.0"/>
+<text class="lbl" x="452.4" y="-61.8" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-state" data-id="S">
+<rect class="sh" x="544.5999999999999" y="-84.2" width="94" height="34" rx="10"/>
+<text class="lbl" x="591.6" y="-62.8" font-size="12.5" font-weight="600" text-anchor="middle">S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-op" data-id="read" data-code="L98-L107,L118-L124">
+<circle class="sh" cx="591.5999999999999" cy="134.4" r="14.0"/>
+<text class="lbl" x="591.5999999999999" y="139.8" font-size="15" text-anchor="middle" font-weight="600">·</text>
+<text class="sub" x="601.3" y="159.4" text-anchor="start">r S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-gate" data-id="bon" data-code="L111-L115">
+<title>bonus for the current token, added on top of the diagonal term already in r S_t</title>
+<rect class="sh" x="397.4" y="212.59999999999997" width="110" height="34" rx="7"/>
+<text class="lbl" x="452.4" y="234.0" font-size="12.5" font-weight="600" text-anchor="middle">(r ⊙ u · k) v</text>
+</g>
+<g class="node fam-op" data-id="sum" data-code="L115,L127">
+<circle class="sh" cx="730.8" cy="134.4" r="14.0"/>
+<text class="lbl" x="730.8" y="139.8" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-io" data-id="o">
+<circle class="sh" cx="846.8" cy="134.4" r="13.0"/>
+<text class="lbl" x="846.8" y="138.4" font-size="11" text-anchor="middle" font-weight="600">o</text>
+</g>
+<g class="node fam-io from-spk" data-id="r2">
+<title>same r as on the left (current token)</title>
+<circle class="spkring" cx="406.0" cy="182.0" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(377.5,185.5)"/>
+<circle class="sh" cx="406.0" cy="182.0" r="13.0"/>
+<text class="lbl" x="406.0" y="186.0" font-size="11" text-anchor="middle" font-weight="600">r</text>
+</g>
+<g class="node fam-io from-spk" data-id="k2">
+<title>same k as on the left (current token)</title>
+<circle class="spkring" cx="452.4" cy="182.0" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(423.9,185.5)"/>
+<circle class="sh" cx="452.4" cy="182.0" r="13.0"/>
+<text class="lbl" x="452.4" y="186.0" font-size="11" text-anchor="middle" font-weight="600">k</text>
+</g>
+<g class="node fam-io from-spk" data-id="v2">
+<title>same v as on the left (current token)</title>
+<circle class="spkring" cx="498.79999999999995" cy="182.0" r="16.2"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(470.3,185.5)"/>
+<circle class="sh" cx="498.79999999999995" cy="182.0" r="13.0"/>
+<text class="lbl" x="498.79999999999995" y="186.0" font-size="11" text-anchor="middle" font-weight="600">v</text>
+</g>
+</g>
+<text class="eq" x="32" y="583.4" style="white-space:pre" xml:space="preserve">S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = diag(w<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>)·S<tspan dy="3.5" font-size="72%">t-1</tspan><tspan dy="-3.5">​</tspan> + k<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>ᵀ v<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>     o<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = r<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> + (r<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> ⊙ u · k<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>) v<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>     w<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan> = exp(−softplus(ŵ<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan>))</text>
+<g class="legend">
+<g class="sw fam-state"><rect class="sh" x="32" y="614.4" width="20" height="14" rx="5"/>
+</g>
+<text x="58" y="625.4">state tensor</text>
+<g class="sw fam-gate"><rect class="sh" x="152.4" y="614.4" width="20" height="14" rx="4"/>
+</g>
+<text x="178.4" y="625.4">gate / modulation</text>
+<g class="sw fam-param"><rect class="sh" x="303.8" y="614.4" width="20" height="14" rx="4"/>
+</g>
+<text x="329.8" y="625.4">parameter</text>
+<g class="sw fam-io from-spk"><circle class="spkring" cx="424.6" cy="621.4" r="7"/><circle class="sh" cx="424.6" cy="621.4" r="4.6"/><path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="scale(0.85) translate(477.2,735.2)"/></g>
+<text x="437.6" y="625.4">input from a spiking projection</text>
+<path class="e e-data" d="M649.8000000000001,621.4 h22"/>
+<text x="677.8000000000001" y="625.4">analog current</text>
+<path class="e e-state" d="M784.6,621.4 h22"/>
+<text x="812.6" y="625.4">state carry</text>
+</g>
+</svg>

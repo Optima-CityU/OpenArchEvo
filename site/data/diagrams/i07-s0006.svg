@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2148 569" width="2148" height="569" class="av" data-theme="light">
+
+<defs>
+<marker id="i07-s0006-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i07-s0006-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i07-s0006-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i07-s0006-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i07-s0006-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i07-s0006-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i07-s0006-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">Rate-regularised HomeoResSSM</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">Iteration 7 · sample 6  ·  Mamba2 state update</text>
+<g class="chip spk"><rect x="32" y="82" width="126" height="24" rx="12"/><text x="95" y="98" text-anchor="middle">8 spiking sites</text></g>
+<g class="chip loss"><rect x="166" y="82" width="119" height="24" rx="12"/><text x="225" y="98" text-anchor="middle">+ 0.01·r̄ loss</text></g>
+<g transform="translate(53.0,214.6)">
+<rect class="panel " x="167.0" y="-78.6" width="1125.2" height="304.0" rx="14"/>
+<text class="cap" x="181.0" y="-61.6">Token mixer<tspan class="capsub" dx="8">Spiking Mamba2 + activity-gated residual</tspan></text>
+<rect class="panel " x="1489.4" y="55.0" width="417.6" height="181.6" rx="14"/>
+<text class="cap" x="1503.4" y="72.0">Channel mixer<tspan class="capsub" dx="8">Spiking MLP + activity-gated residual</tspan></text>
+<path class="e e-res" d="M13.0,280.0 L1320.0,280.0" marker-end="url(#i07-s0006-m-res)"/>
+<path class="e e-res" d="M1348.0,280.0 L1934.8,280.0" marker-end="url(#i07-s0006-m-res)"/>
+<path class="e e-res" d="M1962.8,280.0 L2028.6,280.0" marker-end="url(#i07-s0006-m-res)"/>
+<path class="e e-data" d="M13.0,280.0 L49.0,280.0 Q58.0,280.0 58.0,271.0 L58.0,93.0 Q58.0,84.0 67.0,84.0 L81.0,84.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L185.0,84.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M279.0,84.0 L321.0,84.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M375.0,84.0 L387.0,84.0 Q396.0,84.0 396.0,75.0 L396.0,65.0 Q396.0,56.0 405.0,56.0 L417.0,56.0" marker-end="url(#i07-s0006-m-data)"/>
+<text class="elbl k-data" x="401.0" y="73.0" text-anchor="start">x</text>
+<path class="e e-data" d="M375.0,84.0 L391.0,84.0 Q400.0,84.0 400.0,93.0 L400.0,103.0 Q400.0,112.0 409.0,112.0 L425.0,112.0" marker-end="url(#i07-s0006-m-data)"/>
+<text class="elbl k-data" x="405.0" y="101.0" text-anchor="start">dt</text>
+<path class="e e-data" d="M375.0,84.0 L391.2,84.0 Q400.2,84.0 400.2,75.0 L400.2,28.6 Q400.2,19.6 409.2,19.6 L564.8,19.6" marker-end="url(#i07-s0006-m-data)"/>
+<text class="elbl k-data" x="482.5" y="14.6" text-anchor="middle">B, C</text>
+<path class="e e-data" d="M511.0,56.0 L564.8,56.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M503.0,112.0 L532.5,112.0 Q533.9,112.0 533.9,110.6 L533.9,110.6 Q533.9,109.2 535.3,109.2 L564.8,109.2" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M664.8,67.2 L728.4,67.2" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M756.4,67.2 L811.8,67.2" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M881.8,67.2 L943.0,67.2" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M348.0,98.0 L348.0,136.6 Q348.0,145.6 357.0,145.6 L819.8,145.6" marker-end="url(#i07-s0006-m-data)"/>
+<text class="elbl k-data" x="583.9" y="140.6" text-anchor="middle">z</text>
+<path class="e e-data" d="M873.8,145.6 L948.0,145.6 Q957.0,145.6 957.0,136.6 L957.0,81.2" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M971.0,67.2 L1026.0,67.2" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M1120.0,67.2 L1198.2,67.2" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M1226.2,67.2 L1325.0,67.2 Q1334.0,67.2 1334.0,76.2 L1334.0,266.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M1348.0,280.0 L1373.7,280.0 Q1382.7,280.0 1382.7,271.0 L1382.7,121.0 Q1382.7,112.0 1391.7,112.0 L1403.4,112.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M1473.4,112.0 L1507.4,112.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M1601.4,112.0 L1640.8,112.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M1734.8,112.0 L1813.0,112.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-data" d="M1841.0,112.0 L1939.8,112.0 Q1948.8,112.0 1948.8,121.0 L1948.8,266.0" marker-end="url(#i07-s0006-m-data)"/>
+<path class="e e-ctrl" d="M1039.0,84.2 L1039.0,119.8 Q1039.0,128.8 1048.0,128.8 L1064.0,128.8 Q1073.0,128.8 1073.0,137.8 L1073.0,173.4" marker-end="url(#i07-s0006-m-ctrl)"/>
+<path class="e e-ctrl" d="M198.0,101.0 L198.0,181.4 Q198.0,190.4 207.0,190.4 L1025.0,190.4" marker-end="url(#i07-s0006-m-ctrl)"/>
+<path class="e e-ctrl" d="M1121.0,190.4 L1156.2,190.4" marker-end="url(#i07-s0006-m-ctrl)"/>
+<path class="e e-ctrl" d="M1212.2,173.4 L1212.2,81.2" marker-end="url(#i07-s0006-m-ctrl)"/>
+<path class="e e-ctrl" d="M1653.8,129.0 L1653.8,147.8 Q1653.8,156.8 1662.8,156.8 L1678.8,156.8 Q1687.8,156.8 1687.8,165.8 L1687.8,184.6" marker-end="url(#i07-s0006-m-ctrl)"/>
+<path class="e e-ctrl" d="M1520.4,129.0 L1520.4,192.6 Q1520.4,201.6 1529.4,201.6 L1639.8,201.6" marker-end="url(#i07-s0006-m-ctrl)"/>
+<path class="e e-ctrl" d="M1735.8,201.6 L1771.0,201.6" marker-end="url(#i07-s0006-m-ctrl)"/>
+<path class="e e-ctrl" d="M1827.0,184.6 L1827.0,126.0" marker-end="url(#i07-s0006-m-ctrl)"/>
+<g class="node fam-io" data-id="xin">
+<circle class="sh" cx="0" cy="280" r="13.0"/>
+<text class="lbl" x="0" y="284.0" font-size="11" text-anchor="middle" font-weight="600">x</text>
+</g>
+<g class="node fam-norm" data-id="n1" data-code="L244-L244">
+<rect class="sh" x="81.0" y="70.0" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="116.0" y="87.8" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="inp" data-code="L115-L120">
+<rect class="sh" x="185.0" y="67.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,88.0)"/>
+<text class="lbl" x="239.0" y="82.9" font-size="12.5" font-weight="600" text-anchor="middle">in proj</text>
+<text class="sub" x="239.0" y="95.4" text-anchor="middle">d → 4dᵢ+H</text>
+</g>
+<g class="node fam-act" data-id="split" data-code="L120-L120">
+<rect class="sh" x="321.0" y="70.0" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="348.0" y="87.8" font-size="11" font-weight="600" text-anchor="middle">split</text>
+</g>
+<g class="node fam-conv" data-id="xc" data-code="L126-L126">
+<rect class="sh" x="417.0" y="39.0" width="94" height="34" rx="7"/>
+<text class="lbl" x="464.0" y="54.9" font-size="12.5" font-weight="600" text-anchor="middle">ShortConv</text>
+<text class="sub" x="464.0" y="67.4" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-act" data-id="dt" data-code="L133-L134">
+<rect class="sh" x="425.0" y="98.0" width="78" height="28" rx="14.0"/>
+<text class="lbl" x="464.0" y="115.8" font-size="11" font-weight="600" text-anchor="middle">−softplus</text>
+</g>
+<g class="node fam-core" data-id="core" data-code="L34-L83">
+<rect class="sh" x="564.8" y="5.399999999999999" width="100" height="123.60000000000001" rx="10"/>
+<text class="lbl" x="614.8" y="66.1" font-size="12.5" font-weight="700" text-anchor="middle">SSD scan</text>
+<text class="sub" x="614.8" y="78.6" text-anchor="middle">Mamba2</text>
+<path class="loop" d="M632.8,5.399999999999999 C632.8,-20.6 596.8,-20.6 596.8,5.399999999999999" marker-end="url(#i07-s0006-m-state)"/>
+<text class="sub looplbl" x="614.8" y="-18.6" text-anchor="middle">h<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+<g class="expand" data-detail="core" tabindex="0" role="button"><title>Open the state-update details</title><rect x="630.8" y="-14.600000000000001" width="64" height="16" rx="8"/><text x="662.8" y="-3.400000000000002" text-anchor="middle">⤢ details</text></g>
+</g>
+<g class="node fam-op" data-id="dsk" data-code="L152-L152">
+<circle class="sh" cx="742.4000000000001" cy="67.2" r="14.0"/>
+<text class="lbl" x="742.4000000000001" y="72.6" font-size="15" text-anchor="middle" font-weight="600">+</text>
+<text class="sub" x="752.1" y="92.2" text-anchor="start">D·x</text>
+</g>
+<g class="node fam-norm" data-id="norm" data-code="L154-L154">
+<rect class="sh" x="811.8" y="53.2" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="846.8" y="71.0" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-act" data-id="silu" data-code="L155-L155">
+<rect class="sh" x="819.8" y="131.6" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="846.8" y="149.4" font-size="11" font-weight="600" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-op" data-id="zm" data-code="L155-L155">
+<circle class="sh" cx="957.0" cy="67.2" r="14.0"/>
+<text class="lbl" x="957.0" y="72.6" font-size="15" text-anchor="middle" font-weight="600">×</text>
+</g>
+<g class="node fam-spk" data-id="oproj" data-code="L157-L158">
+<rect class="sh" x="1026.0" y="50.2" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1034.0,71.2)"/>
+<text class="lbl" x="1080.0" y="71.6" font-size="12.5" font-weight="600" text-anchor="middle">out proj</text>
+</g>
+<g class="node fam-stat novel" data-id="rate" data-code="L249-L261">
+<rect class="glow" x="1025.0" y="173.4" width="96" height="34" rx="9"/>
+<rect class="ring" x="1021.0" y="169.4" width="104" height="42" rx="21.0"/>
+<rect class="sh" x="1025.0" y="173.4" width="96" height="34" rx="17.0"/>
+<text class="lbl" x="1073.0" y="189.3" font-size="12.5" font-weight="600" text-anchor="middle">spike rate</text>
+<text class="sub" x="1073.0" y="201.8" text-anchor="middle">r̄ in, out</text>
+<g class="badge"><circle cx="1119.0" cy="171.4" r="8"/><text x="1119.0" y="174.9" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-spk novel" data-id="rg" data-code="L183-L215">
+<title>SpikingResidualGate: two SpikingLinears (1 → d/2, d/2 → 1): 2 neuron populations</title>
+<rect class="glow" x="1156.1999999999998" y="173.4" width="112" height="34" rx="9"/>
+<rect class="ring" x="1152.1999999999998" y="169.4" width="120" height="42" rx="11"/>
+<rect class="sh" x="1156.1999999999998" y="173.4" width="112" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1164.2,194.4)"/>
+<text class="lbl" x="1219.2" y="189.3" font-size="12.5" font-weight="600" text-anchor="middle">residual gate</text>
+<text class="sub" x="1219.2" y="201.8" text-anchor="middle">1 → d/2 → 1</text>
+<g class="badge"><circle cx="1266.1999999999998" cy="171.4" r="8"/><text x="1266.1999999999998" y="174.9" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-op novel" data-id="gm" data-code="L263-L265">
+<circle class="ring" cx="1212.1999999999998" cy="67.2" r="18.0"/>
+<circle class="sh" cx="1212.1999999999998" cy="67.2" r="14.0"/>
+<text class="lbl" x="1212.1999999999998" y="72.6" font-size="15" text-anchor="middle" font-weight="600">×</text>
+<text class="sub" x="1221.9" y="92.2" text-anchor="start">1+2σ(g)</text>
+<g class="badge"><circle cx="1226.1999999999998" cy="53.2" r="8"/><text x="1226.1999999999998" y="56.7" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-op" data-id="a1" data-code="L267-L267">
+<circle class="sh" cx="1334.0" cy="280" r="14.0"/>
+<text class="lbl" x="1334.0" y="285.4" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-norm" data-id="n2" data-code="L271-L271">
+<rect class="sh" x="1403.4" y="98.0" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="1438.4" y="115.8" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="fc1" data-code="L176-L177">
+<rect class="sh" x="1507.4" y="95.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1515.4,116.0)"/>
+<text class="lbl" x="1561.4" y="110.9" font-size="12.5" font-weight="600" text-anchor="middle">fc1</text>
+<text class="sub" x="1561.4" y="123.4" text-anchor="middle">d → 2d</text>
+</g>
+<g class="node fam-spk" data-id="fc2" data-code="L178-L178">
+<rect class="sh" x="1640.8000000000002" y="95.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1648.8,116.0)"/>
+<text class="lbl" x="1694.8" y="110.9" font-size="12.5" font-weight="600" text-anchor="middle">fc2</text>
+<text class="sub" x="1694.8" y="123.4" text-anchor="middle">2d → d</text>
+</g>
+<g class="node fam-stat novel" data-id="rate2" data-code="L276-L287">
+<rect class="glow" x="1639.8000000000002" y="184.6" width="96" height="34" rx="9"/>
+<rect class="ring" x="1635.8000000000002" y="180.6" width="104" height="42" rx="21.0"/>
+<rect class="sh" x="1639.8000000000002" y="184.6" width="96" height="34" rx="17.0"/>
+<text class="lbl" x="1687.8" y="200.5" font-size="12.5" font-weight="600" text-anchor="middle">spike rate</text>
+<text class="sub" x="1687.8" y="213.0" text-anchor="middle">r̄ fc1, fc2</text>
+<g class="badge"><circle cx="1733.8000000000002" cy="182.6" r="8"/><text x="1733.8000000000002" y="186.1" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-spk novel" data-id="rg2" data-code="L183-L215">
+<title>SpikingResidualGate: two SpikingLinears (1 → d/2, d/2 → 1): 2 neuron populations</title>
+<rect class="glow" x="1771.0" y="184.6" width="112" height="34" rx="9"/>
+<rect class="ring" x="1767.0" y="180.6" width="120" height="42" rx="11"/>
+<rect class="sh" x="1771.0" y="184.6" width="112" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1779.0,205.6)"/>
+<text class="lbl" x="1834.0" y="200.5" font-size="12.5" font-weight="600" text-anchor="middle">residual gate</text>
+<text class="sub" x="1834.0" y="213.0" text-anchor="middle">1 → d/2 → 1</text>
+<g class="badge"><circle cx="1881.0" cy="182.6" r="8"/><text x="1881.0" y="186.1" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-op novel" data-id="gm2" data-code="L289-L291">
+<circle class="ring" cx="1827.0" cy="112" r="18.0"/>
+<circle class="sh" cx="1827.0" cy="112" r="14.0"/>
+<text class="lbl" x="1827.0" y="117.4" font-size="15" text-anchor="middle" font-weight="600">×</text>
+<text class="sub" x="1836.7" y="137.0" text-anchor="start">1+2σ(g)</text>
+<g class="badge"><circle cx="1841.0" cy="98.0" r="8"/><text x="1841.0" y="101.5" text-anchor="middle">1</text></g>
+</g>
+<g class="node fam-op" data-id="a2" data-code="L293-L293">
+<circle class="sh" cx="1948.8000000000002" cy="280" r="14.0"/>
+<text class="lbl" x="1948.8000000000002" y="285.4" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-io" data-id="xout">
+<circle class="sh" cx="2041.6000000000001" cy="280" r="13.0"/>
+<text class="lbl" x="2041.6000000000001" y="284.0" font-size="11" text-anchor="middle" font-weight="600">y</text>
+</g>
+</g>
+<g class="legend">
+<g class="sw fam-spk"><rect class="sh" x="32" y="541.6" width="20" height="14" rx="4"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(35,552.6)"/>
+</g>
+<text x="58" y="552.6">spiking linear: neuron → W (weights see spikes)</text>
+<g class="sw fam-conv"><rect class="sh" x="369.40000000000003" y="541.6" width="20" height="14" rx="4"/>
+</g>
+<text x="395.40000000000003" y="552.6">local conv</text>
+<g class="sw fam-core"><rect class="sh" x="477.40000000000003" y="541.6" width="20" height="14" rx="5"/>
+</g>
+<text x="503.40000000000003" y="552.6">state update</text>
+<g class="sw fam-stat"><rect class="sh" x="597.8000000000001" y="541.6" width="20" height="14" rx="7"/>
+</g>
+<text x="623.8000000000001" y="552.6">spike-rate / state readout</text>
+<rect class="ring" x="805.0000000000001" y="541.6" width="20" height="14" rx="4"/><rect class="sw-nv" x="806.0000000000001" y="542.6" width="18" height="12" rx="4"/>
+<text x="831.0000000000001" y="552.6">evolved</text>
+<path class="e e-data" d="M894.4000000000001,548.6 h22"/>
+<text x="922.4000000000001" y="552.6">analog current</text>
+<path class="e e-ctrl" d="M1029.2,548.6 h22"/>
+<text x="1057.2" y="552.6">control from spike statistics</text>
+<path class="e e-res" d="M1257.0,548.6 h22"/>
+<text x="1285.0" y="552.6">residual</text>
+<text class="lgnote" x="1354.6" y="552.6">spiking neurons: SDN (LIF-type)<tspan class="focus-only">  ·  faded = inherited analog part</tspan></text>
+</g>
+</svg>

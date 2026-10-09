@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1846 594" width="1846" height="594" class="av" data-theme="light">
+
+<defs>
+<marker id="i00-gated-deltanet-m-res" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-res" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-gated-deltanet-m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-data" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-gated-deltanet-m-spk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-spk" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-gated-deltanet-m-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-ctrl" d="M0,1 L9,5 L0,9 z"/></marker>
+<marker id="i00-gated-deltanet-m-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="m-state" d="M0,1 L9,5 L0,9 z"/></marker>
+<pattern id="i00-gated-deltanet-grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle class="gridbg" cx="1" cy="1" r="0.8"/></pattern>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="14"/><rect width="100%" height="100%" rx="14" fill="url(#i00-gated-deltanet-grid)"/>
+<text class="ttl" x="32" y="42" font-size="25">Spiking Gated DeltaNet</text>
+<text x="32" y="65" font-size="12.5" fill="var(--muted)">Iteration 0  ·  initial expert (model zoo)</text>
+<g class="chip spk"><rect x="32" y="82" width="126" height="24" rx="12"/><text x="95" y="98" text-anchor="middle">8 spiking sites</text></g>
+<g transform="translate(53.0,237.0)">
+<rect class="panel " x="167.0" y="-101.0" width="860.8" height="348.8" rx="14"/>
+<text class="cap" x="181.0" y="-84.0">Token mixer<tspan class="capsub" dx="8">Spiking Gated DeltaNet</tspan></text>
+<rect class="panel " x="1245.8" y="83.0" width="350.4" height="92.0" rx="14"/>
+<text class="cap" x="1259.8" y="100.0">Channel mixer<tspan class="capsub" dx="8">Spiking MLP (GELU)</tspan></text>
+<path class="e e-res" d="M13.0,282.8 L1076.4,282.8" marker-end="url(#i00-gated-deltanet-m-res)"/>
+<path class="e e-res" d="M1661.2,282.8 L1727.0,282.8" marker-end="url(#i00-gated-deltanet-m-res)"/>
+<path class="e e-res" d="M1104.4,282.8 L1159.8,282.8" marker-end="url(#i00-gated-deltanet-m-res)"/>
+<path class="e e-res" d="M1229.8,282.8 L1633.2,282.8" marker-end="url(#i00-gated-deltanet-m-res)"/>
+<path class="e e-data" d="M13.0,282.8 L49.0,282.8 Q58.0,282.8 58.0,273.8 L58.0,93.0 Q58.0,84.0 67.0,84.0 L81.0,84.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,75.0 L174.0,5.5 Q174.0,0.0 179.5,0.0 L185.0,0.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M279.0,0.0 L301.0,0.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,75.0 L174.0,55.9 Q174.0,50.4 179.5,50.4 L185.0,50.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M279.0,50.4 L301.0,50.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.6,84.0 Q174.0,84.0 174.0,92.4 L174.0,95.3 Q174.0,100.8 179.5,100.8 L185.0,100.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M279.0,100.8 L301.0,100.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M395.0,0.0 L431.2,0.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M485.2,0.0 L529.6,0.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M595.6,0.0 L659.4,0.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M395.0,50.4 L431.2,50.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M485.2,50.4 L529.6,50.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M595.6,50.4 L659.4,50.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M395.0,100.8 L659.4,100.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,93.0 L174.0,156.9 Q174.0,162.4 179.5,162.4 L185.0,162.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M151.0,84.0 L165.0,84.0 Q174.0,84.0 174.0,93.0 L174.0,207.3 Q174.0,212.8 179.5,212.8 L185.0,212.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M279.0,162.4 L301.0,162.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M395.0,162.4 L431.2,162.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M279.0,212.8 L321.0,212.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M485.2,162.4 L687.0,162.4 Q696.0,162.4 696.0,153.4 L696.0,117.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<text class="elbl k-data" x="590.6" y="157.4" text-anchor="middle">log α</text>
+<path class="e e-data" d="M375.0,212.8 L727.6,212.8 Q736.6,212.8 736.6,203.8 L736.6,117.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<text class="elbl k-data" x="555.8" y="207.8" text-anchor="middle">β</text>
+<path class="e e-data" d="M767.4,50.4 L811.8,50.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M881.8,50.4 L915.8,50.4" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M1009.8,50.4 L1081.4,50.4 Q1090.4,50.4 1090.4,59.4 L1090.4,268.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M1578.2,140.0 L1638.2,140.0 Q1647.2,140.0 1647.2,149.0 L1647.2,268.8" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M1357.8,140.0 L1394.0,140.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M1448.0,140.0 L1484.2,140.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<path class="e e-data" d="M1194.8,268.8 L1194.8,149.0 Q1194.8,140.0 1203.8,140.0 L1263.8,140.0" marker-end="url(#i00-gated-deltanet-m-data)"/>
+<g class="node fam-norm" data-id="n1" data-code="L349">
+<rect class="sh" x="81.0" y="70.0" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="116.0" y="87.8" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="q" data-code="L250">
+<rect class="sh" x="185.0" y="-17.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,4.0)"/>
+<text class="lbl" x="239.0" y="-1.1" font-size="12.5" font-weight="600" text-anchor="middle">q proj</text>
+<text class="sub" x="239.0" y="11.4" text-anchor="middle">d → d<tspan dy="3.5" font-size="72%">k</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-conv" data-id="cq" data-code="L263">
+<rect class="sh" x="301.0" y="-17.0" width="94" height="34" rx="7"/>
+<text class="lbl" x="348.0" y="-1.1" font-size="12.5" font-weight="600" text-anchor="middle">ShortConv</text>
+<text class="sub" x="348.0" y="11.4" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-spk" data-id="k" data-code="L251">
+<rect class="sh" x="185.0" y="33.4" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,54.4)"/>
+<text class="lbl" x="239.0" y="49.3" font-size="12.5" font-weight="600" text-anchor="middle">k proj</text>
+<text class="sub" x="239.0" y="61.8" text-anchor="middle">d → d<tspan dy="3.5" font-size="72%">k</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-conv" data-id="ck" data-code="L264">
+<rect class="sh" x="301.0" y="33.4" width="94" height="34" rx="7"/>
+<text class="lbl" x="348.0" y="49.3" font-size="12.5" font-weight="600" text-anchor="middle">ShortConv</text>
+<text class="sub" x="348.0" y="61.8" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-spk" data-id="v" data-code="L252">
+<rect class="sh" x="185.0" y="83.8" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,104.8)"/>
+<text class="lbl" x="239.0" y="99.7" font-size="12.5" font-weight="600" text-anchor="middle">v proj</text>
+<text class="sub" x="239.0" y="112.2" text-anchor="middle">d → d<tspan dy="3.5" font-size="72%">v</tspan><tspan dy="-3.5">​</tspan></text>
+</g>
+<g class="node fam-conv" data-id="cv" data-code="L265">
+<rect class="sh" x="301.0" y="83.8" width="94" height="34" rx="7"/>
+<text class="lbl" x="348.0" y="99.7" font-size="12.5" font-weight="600" text-anchor="middle">ShortConv</text>
+<text class="sub" x="348.0" y="112.2" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-act" data-id="sq" data-code="L269">
+<title>second SiLU: the ShortConv already applies SiLU, then F.silu is applied again</title>
+<rect class="sh" x="431.20000000000005" y="-14.0" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="458.2" y="3.8" font-size="11" font-weight="600" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-act" data-id="l2q" data-code="L71-L72">
+<rect class="sh" x="529.5999999999999" y="-14.0" width="66" height="28" rx="14.0"/>
+<text class="lbl" x="562.6" y="3.8" font-size="11" font-weight="600" text-anchor="middle">L2 norm</text>
+</g>
+<g class="node fam-act" data-id="sk" data-code="L269">
+<title>second SiLU: the ShortConv already applies SiLU, then F.silu is applied again</title>
+<rect class="sh" x="431.20000000000005" y="36.4" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="458.2" y="54.2" font-size="11" font-weight="600" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-act" data-id="l2k" data-code="L71-L72">
+<rect class="sh" x="529.5999999999999" y="36.4" width="66" height="28" rx="14.0"/>
+<text class="lbl" x="562.6" y="54.2" font-size="11" font-weight="600" text-anchor="middle">L2 norm</text>
+</g>
+<g class="node fam-spk" data-id="gp" data-code="L253">
+<rect class="sh" x="185.0" y="145.4" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,166.4)"/>
+<text class="lbl" x="239.0" y="161.3" font-size="12.5" font-weight="600" text-anchor="middle">g proj</text>
+<text class="sub" x="239.0" y="173.8" text-anchor="middle">d → H</text>
+</g>
+<g class="node fam-conv" data-id="cg" data-code="L266">
+<rect class="sh" x="301.0" y="145.4" width="94" height="34" rx="7"/>
+<text class="lbl" x="348.0" y="161.3" font-size="12.5" font-weight="600" text-anchor="middle">ShortConv</text>
+<text class="sub" x="348.0" y="173.8" text-anchor="middle">SiLU</text>
+</g>
+<g class="node fam-act" data-id="gl" data-code="L288">
+<rect class="sh" x="431.20000000000005" y="148.4" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="458.2" y="166.2" font-size="11" font-weight="600" text-anchor="middle">logσ</text>
+</g>
+<g class="node fam-spk" data-id="bp" data-code="L281">
+<rect class="sh" x="185.0" y="195.79999999999998" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(193.0,216.8)"/>
+<text class="lbl" x="239.0" y="211.7" font-size="12.5" font-weight="600" text-anchor="middle">β proj</text>
+<text class="sub" x="239.0" y="224.2" text-anchor="middle">d → H</text>
+</g>
+<g class="node fam-act" data-id="bs" data-code="L282">
+<rect class="sh" x="321.0" y="198.79999999999998" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="348.0" y="216.6" font-size="11" font-weight="600" text-anchor="middle">σ</text>
+</g>
+<g class="node fam-core" data-id="core" data-code="L55-L204">
+<rect class="sh" x="659.4000000000001" y="-17.000000000000007" width="108" height="134.8" rx="10"/>
+<text class="lbl" x="713.4" y="49.3" font-size="12.5" font-weight="700" text-anchor="middle">Gated delta</text>
+<text class="sub" x="713.4" y="61.8" text-anchor="middle">chunkwise</text>
+<path class="loop" d="M731.4000000000001,-17.000000000000007 C731.4000000000001,-43.00000000000001 695.4000000000001,-43.00000000000001 695.4000000000001,-17.000000000000007" marker-end="url(#i00-gated-deltanet-m-state)"/>
+<text class="sub looplbl" x="713.4000000000001" y="-41.00000000000001" text-anchor="middle">S<tspan dy="3.5" font-size="72%">t</tspan><tspan dy="-3.5">​</tspan></text>
+<g class="expand" data-detail="core" tabindex="0" role="button"><title>Open the state-update details</title><rect x="733.4000000000001" y="-37.00000000000001" width="64" height="16" rx="8"/><text x="765.4000000000001" y="-25.800000000000008" text-anchor="middle">⤢ details</text></g>
+</g>
+<g class="node fam-norm" data-id="onorm" data-code="L308">
+<rect class="sh" x="811.8" y="36.4" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="846.8" y="54.2" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="oproj" data-code="L311">
+<rect class="sh" x="915.8000000000001" y="33.4" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(923.8,54.4)"/>
+<text class="lbl" x="969.8" y="54.8" font-size="12.5" font-weight="600" text-anchor="middle">o proj</text>
+</g>
+<g class="node fam-io" data-id="xin">
+<circle class="sh" cx="0" cy="282.8" r="13.0"/>
+<text class="lbl" x="0" y="286.8" font-size="11" text-anchor="middle" font-weight="600">x</text>
+</g>
+<g class="node fam-op" data-id="a1" data-code="L352">
+<circle class="sh" cx="1090.4" cy="282.8" r="14.0"/>
+<text class="lbl" x="1090.4" y="288.2" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-norm" data-id="n2" data-code="L354">
+<title>post-norm residual: the MLP output is added to the normalised stream (x = x + x_mlp after x = norm2(x))</title>
+<rect class="sh" x="1159.8000000000002" y="268.8" width="70" height="28" rx="14.0"/>
+<text class="lbl" x="1194.8" y="286.7" font-size="11" font-weight="600" text-anchor="middle">RMSNorm</text>
+</g>
+<g class="node fam-spk" data-id="fc1" data-code="L326">
+<rect class="sh" x="1263.8000000000002" y="123.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1271.8,144.0)"/>
+<text class="lbl" x="1317.8" y="138.9" font-size="12.5" font-weight="600" text-anchor="middle">fc1</text>
+<text class="sub" x="1317.8" y="151.4" text-anchor="middle">d → 2d</text>
+</g>
+<g class="node fam-act" data-id="gelu" data-code="L327">
+<rect class="sh" x="1394.0" y="126.0" width="54" height="28" rx="14.0"/>
+<text class="lbl" x="1421.0" y="143.8" font-size="11" font-weight="600" text-anchor="middle">GELU</text>
+</g>
+<g class="node fam-spk" data-id="fc2" data-code="L328">
+<rect class="sh" x="1484.1999999999998" y="123.0" width="94" height="34" rx="7"/>
+<path class="glyph" d="M0,0 h1.5 l1.2,-9 l1.2,9 h2.4 l1.2,-9 l1.2,9 h1.5" transform="translate(1492.2,144.0)"/>
+<text class="lbl" x="1538.2" y="138.9" font-size="12.5" font-weight="600" text-anchor="middle">fc2</text>
+<text class="sub" x="1538.2" y="151.4" text-anchor="middle">2d → d</text>
+</g>
+<g class="node fam-op" data-id="a2" data-code="L360">
+<circle class="sh" cx="1647.1999999999998" cy="282.8" r="14.0"/>
+<text class="lbl" x="1647.1999999999998" y="288.2" font-size="15" text-anchor="middle" font-weight="600">+</text>
+</g>
+<g class="node fam-io" data-id="xout">
+<circle class="sh" cx="1740.0" cy="282.8" r="13.0"/>
+<text class="lbl" x="1740.0" y="286.8" font-size="11" text-anchor="middle" font-weight="600">y</text>
+</g>
+</g>
+<g class="legend">
+<g class="sw fam-spk"><rect class="sh" x="32" y="566.8" width="20" height="14" rx="4"/>
+<path class="glyph" d="M0,0 h1.2 l1,-7 l1,7 h2 l1,-7 l1,7 h1.2" transform="translate(35,577.8)"/>
+</g>
+<text x="58" y="577.8">spiking linear: neuron → W (weights see spikes)</text>
+<g class="sw fam-conv"><rect class="sh" x="369.40000000000003" y="566.8" width="20" height="14" rx="4"/>
+</g>
+<text x="395.40000000000003" y="577.8">local conv</text>
+<g class="sw fam-core"><rect class="sh" x="477.40000000000003" y="566.8" width="20" height="14" rx="5"/>
+</g>
+<text x="503.40000000000003" y="577.8">state update</text>
+<rect class="ring" x="597.8000000000001" y="566.8" width="20" height="14" rx="4"/><rect class="sw-nv" x="598.8000000000001" y="567.8" width="18" height="12" rx="4"/>
+<text x="623.8000000000001" y="577.8">evolved</text>
+<path class="e e-data" d="M687.2,573.8 h22"/>
+<text x="715.2" y="577.8">analog current</text>
+<path class="e e-res" d="M822.0,573.8 h22"/>
+<text x="850.0" y="577.8">residual</text>
+<text class="lgnote" x="919.6" y="577.8">spiking neurons: SDN (LIF-type)<tspan class="focus-only">  ·  faded = inherited analog part</tspan></text>
+</g>
+</svg>

@@ -1,0 +1,84 @@
+# OpenArchEvo search configuration (inner + outer loop).
+# Defaults reproduce the main-search settings of the paper. API keys are never
+# stored here: only the *names* of the environment variables that hold them.
+# What each section controls: docs/pipeline.md. Adapting to a new task: docs/extending.md.
+
+fitness_mode: composite        # composite (WT2 PPL + ListOps acc) | wt2_only (single-task example)
+seed: 0
+
+llm:                           # program generator, OpenAI-compatible chat endpoint
+  model: gemini-2.5-flash
+  base_url_env: OPENAI_BASE_URL
+  api_key_env: OPENAI_API_KEY
+  max_tokens: 32768
+  temperature: null
+  timeout_s: 600
+
+embedder:                      # rationale embeddings, OpenAI-compatible embeddings endpoint
+  model: text-embedding-v4
+  dimensions: 2048
+  base_url_env: EMBEDDING_BASE_URL
+  api_key_env: EMBEDDING_API_KEY
+
+novelty:
+  code_backend: codebleu       # codebleu (paper) | difflib (no extra dependencies)
+  duplicate_eps: 1.0e-6        # near-duplicate if any view similarity >= 1 - eps
+  num_workers: 16              # processes for CodeBLEU (CPU-bound); 0 = in-thread
+
+surrogate:                     # client side; start the service with scripts/start_surrogate.py
+  url_env: SURROGATE_URL
+  default_url: http://127.0.0.1:9000   # keep the service on loopback; use an SSH tunnel across machines
+  timeout_s: 600
+  token_env: SURROGATE_TOKEN           # sent as a bearer token when set
+
+inner_loop:
+  pool_size: 1080              # accepted candidates per outer iteration
+  n_islands: 10
+  island_capacity: 20          # survival trims an island back to this size at 2x
+  inter_island_prob: 0.5
+  num_parents: 2               # programs shown in each prompt
+  samples_per_prompt: 2
+  include_rationale: true
+  num_workers: 16
+  reset_interval_s: 3600       # clear the weaker half of the islands this often
+  selection_pressure: 1.0
+  fitness_rank_weight: 0.2
+  max_attempts_factor: 10
+  max_consecutive_errors: 20   # stop on persistent LLM / embedding / surrogate errors (0 = never)
+
+outer_loop:
+  rounds: 10                   # T
+  batch_size: 16               # K
+  budget: 160                  # B (new evaluations, excluding the initial archive)
+  shortlist_top: 30
+  shortlist_dissim: 30
+  best_per_island: 2
+  stepping_stones: 5
+  warm_start:
+    enabled: false             # paper ablation (WT2-only studies); not needed for new problems
+    pool_size: 48
+  # Optional: used only by `run_round.py --auto` to train each selected program
+  # locally. Each command runs from the repository root and must write
+  # {results_dir}/{id}.<task>.json. Placeholders: {python} {repo} {program} {id} {results_dir}.
+  train_commands:
+    - "{python} training/train_wikitext2.py --program {program} --result_json {results_dir}/{id}.wikitext2.json"
+    - "{python} training/train_listops.py --program {program} --result_json {results_dir}/{id}.listops.json"
+
+# Merged on top of the settings above when a script is run with --dry-run
+# (fake LLM, fake embedder, fake surrogate, fake training; CPU only).
+dry_run:
+  novelty:
+    code_backend: difflib
+    num_workers: 0
+  inner_loop:
+    pool_size: 16
+    n_islands: 2
+    island_capacity: 4
+    num_workers: 2
+    reset_interval_s: 0.5
+  outer_loop:
+    rounds: 3
+    batch_size: 3
+    budget: 9
+    shortlist_top: 6
+    shortlist_dissim: 4
