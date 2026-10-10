@@ -87,7 +87,8 @@ def main() -> None:
     loaders = {s: DataLoader(data[s], batch_size=o["batch_size"], shuffle=False, num_workers=cfg["num_workers"])
                for s in ("train", "validation", "test")}
 
-    model = build_model(args.program, cfg["model"], VOCAB_SIZE, VOCAB_SIZE, PAD_ID, is_lm=True).to(device)
+    model = build_model(args.program, cfg["model"], VOCAB_SIZE, VOCAB_SIZE, PAD_ID,
+                        is_lm=True, device=device).to(device)
     optimizer, scheduler = build_optimizer(model, o, len(loaders["train"]))
     log(f"params: {sum(p.numel() for p in model.parameters()) / 1e6:.2f}M")
 

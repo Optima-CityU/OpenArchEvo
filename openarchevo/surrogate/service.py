@@ -10,7 +10,7 @@ Endpoints (JSON in / JSON out):
 
 Fingerprint extraction executes untrusted LLM-written code, so each request runs
 in a fresh subprocess with a timeout, one at a time per configured device.
-A program that fails to build or run is reported with HTTP 422.
+A program that fails to build, run or pass the causality gate is reported with HTTP 422.
 
 **Security.** The subprocess is not a sandbox: anyone who can reach the service
 can run arbitrary code on its machine. Bind it to 127.0.0.1 (the default) and

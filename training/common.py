@@ -24,6 +24,7 @@ sys.path.insert(0, str(REPO_ROOT))  # so that `openarchevo` imports without inst
 
 from openarchevo.contract import BLOCK_CLASS  # noqa: E402
 from openarchevo.models import SequenceModel, load_block_class  # noqa: E402
+from openarchevo.models.causality import check_block_causality  # noqa: E402
 
 
 def parse_args(description: str, task: str) -> tuple[argparse.Namespace, dict[str, Any]]:
@@ -62,8 +63,14 @@ def setup(seed: Optional[int]) -> str:
 
 
 def build_model(program: Path, model_cfg: dict[str, Any], vocab_size: int, n_outputs: int,
-                pad_token_id: int, is_lm: bool) -> SequenceModel:
+                pad_token_id: int, is_lm: bool, *, device: str = "cpu") -> SequenceModel:
     block_cls = load_block_class(program)
+    if is_lm:
+        check_block_causality(
+            block_cls, device=device, label=program.stem, d_model=model_cfg["d_model"],
+            num_heads=model_cfg["num_heads"], d_ffn_mult=model_cfg.get("d_ffn_mult", 2),
+            neuron_type=model_cfg.get("neuron_type", "bptt"),
+            extra_block_kwargs=model_cfg.get("extra_block_kwargs"))
     return SequenceModel(block_cls, vocab_size=vocab_size, n_outputs=n_outputs, pad_token_id=pad_token_id,
                          is_lm=is_lm, **model_cfg)
 
