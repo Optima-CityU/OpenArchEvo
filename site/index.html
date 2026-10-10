@@ -84,13 +84,13 @@
   <div class="wrap">
     <p class="eyebrow">Method</p>
     <h2>Two loops: explore cheaply, train selectively</h2>
-    <p class="lede">An inner loop generates thousands of feasible programs per iteration and ranks them with a surrogate. An outer loop spends real GPU time on at most 16 of them, chosen for predicted performance <em>and</em> novelty, and feeds the measured results back.</p>
+    <p class="lede">An <span class="t-inner">inner loop</span> generates thousands of feasible programs per iteration and ranks them with a surrogate. An <span class="t-outer">outer loop</span> spends real GPU time on at most 16 of them, chosen for predicted performance <em>and</em> novelty, and feeds the measured results back.</p>
     <figure class="figure">
       <div class="frame"><img class="zoomable" src="assets/pipeline.webp" alt="OpenArchEvo pipeline: inner loop (initialization and variation, three-view representation, screening and prediction, multi-island evolution) and outer loop (shortlisting, NSGA-II selection, real training, archive update)" data-title="OpenArchEvo overview (paper Fig. 2)" width="2400" height="840" loading="lazy"></div>
       <figcaption>Overview (paper Fig. 2). Click to enlarge.</figcaption>
     </figure>
     <div class="loops">
-      <div class="loop">
+      <div class="loop loop-inner">
         <h3><span class="k">INNER</span> LLM-driven program evolution</h3>
         <ol class="steps">
           <li><b>Seed</b> 10 islands with strong and diverse programs from the trained archive.</li>
@@ -99,7 +99,7 @@
           <li><b>Survive</b>: islands keep their best-predicted programs and weak islands are reseeded, until ~1,080 are accepted.</li>
         </ol>
       </div>
-      <div class="loop">
+      <div class="loop loop-outer">
         <h3><span class="k">OUTER</span> Selective real training</h3>
         <ol class="steps">
           <li><b>Select</b> at most 16 candidates by NSGA-II on predicted fitness and novelty.</li>
@@ -118,21 +118,25 @@
     <p class="eyebrow">Representation · core contribution</p>
     <h2 id="rep-h">How do you compare architectures nobody has trained yet?</h2>
     <p class="lede">When candidates are long architecture programs, the hard question is not <em>how</em> you search (evolution or a multi-agent system) but how you <b>describe</b> a network so that you can compare candidates and predict their quality. OpenArchEvo describes every program at three levels.</p>
+    <figure class="figure rep-fig">
+      <div class="frame"><img class="zoomable" src="assets/representation-fig3.webp" alt="Three-view SNN architecture representation: (a) code, compared by n-grams, syntax and dataflow; (b) design rationale, embedded by a text model; (c) behavioural fingerprint, a 21-D vector of module statistics, structural statistics and initialization-time probes such as SWSP and FireRate" data-title="Three-view representation (paper Fig. 3)" width="1600" height="471" loading="lazy"></div>
+      <figcaption>Paper Fig. 3. Click to enlarge.</figcaption>
+    </figure>
 
     <ol class="rep-views" aria-label="The three views">
-      <li class="rep-view">
+      <li class="rep-view rep-v-code">
         <span class="rep-vk">01 · Code</span>
         <svg class="rep-vi" viewBox="0 0 64 40" aria-hidden="true"><rect x="2" y="5" width="34" height="4" rx="2"/><rect x="8" y="13" width="44" height="4" rx="2" class="a"/><rect x="8" y="21" width="28" height="4" rx="2"/><rect x="2" y="29" width="40" height="4" rx="2"/></svg>
         <h3>What it implements</h3>
         <p>Operations and dataflow, compared with <b>CodeBLEU</b>.</p>
       </li>
-      <li class="rep-view">
+      <li class="rep-view rep-v-rat">
         <span class="rep-vk">02 · Design rationale</span>
         <svg class="rep-vi" viewBox="0 0 64 40" aria-hidden="true"><path d="M4 6h46a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H22l-10 8v-8H10a6 6 0 0 1-6-6V6Z" class="o"/><rect x="11" y="12" width="30" height="3" rx="1.5"/><rect x="11" y="19" width="20" height="3" rx="1.5" class="a"/></svg>
         <h3>What it intends</h3>
         <p>The LLM&rsquo;s stated idea, compared by <b>text embedding</b>.</p>
       </li>
-      <li class="rep-view">
+      <li class="rep-view rep-v-fp">
         <span class="rep-vk">03 · Behavioural fingerprint</span>
         <svg class="rep-vi" viewBox="0 0 64 40" aria-hidden="true"><g><rect x="3" y="20" width="4" height="16" rx="1.5"/><rect x="10" y="10" width="4" height="26" rx="1.5" class="a"/><rect x="17" y="24" width="4" height="12" rx="1.5"/><rect x="24" y="6" width="4" height="30" rx="1.5" class="a"/><rect x="31" y="16" width="4" height="20" rx="1.5"/><rect x="38" y="27" width="4" height="9" rx="1.5"/><rect x="45" y="13" width="4" height="23" rx="1.5" class="a"/><rect x="52" y="22" width="4" height="14" rx="1.5"/></g></svg>
         <h3>How it behaves</h3>
@@ -140,8 +144,8 @@
       </li>
     </ol>
     <div class="rep-nov">
-      <p class="rep-nov-t"><b>Novelty</b> is the mean three-view distance to a reference set. The <b>fingerprint</b> alone also feeds the surrogate and the near-duplicate filter.</p>
-      <p class="rep-eq mono">d = 1 &minus; &#8531;(s<sub>code</sub> + s<sub>rat</sub> + s<sub>fp</sub>)<span aria-hidden="true">&ensp;&middot;&ensp;</span><br class="rep-br">&#119977;(a) = mean<sub>a&prime;&isin;&#8475;</sub> d(a, a&prime;)</p>
+      <p class="rep-nov-t"><b>Novelty</b> is the mean three-view distance to a reference set. The <b class="rep-fpw">fingerprint</b> alone also feeds the surrogate and the near-duplicate filter.</p>
+      <p class="rep-eq mono">d = 1 &minus; &#8531;(<span class="rep-s-code">s<sub>code</sub></span> + <span class="rep-s-rat">s<sub>rat</sub></span> + <span class="rep-s-fp">s<sub>fp</sub></span>)<span aria-hidden="true">&ensp;&middot;&ensp;</span><br class="rep-br">&#119977;(a) = mean<sub>a&prime;&isin;&#8475;</sub> d(a, a&prime;)</p>
     </div>
 
     <div class="rep-block">
@@ -183,10 +187,10 @@
 </section>
 <!-- REPRESENTATION:END -->
 
-<section class="section" id="inner">
+<section class="section sec-inner" id="inner">
   <div class="wrap">
     <p class="eyebrow">Inside one iteration · real data</p>
-    <h2>What the inner loop explored before anything was trained</h2>
+    <h2>What the <span class="t-inner">inner loop</span> explored before anything was trained</h2>
     <p class="lede">Each grey dot is a program the LLM wrote and the surrogate scored; the coloured dots are the few that were then trained (hover to compare prediction with reality).</p>
     <div class="panel inner-panel" data-inner></div>
   </div>

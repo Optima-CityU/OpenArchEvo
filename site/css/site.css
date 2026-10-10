@@ -17,6 +17,12 @@
   --plum: #30243b;
   --peach: #f0b79d;
   --pt-expert: #b3a8ba;
+  /* paper colour semantics (Fig. 2 loops, Fig. 3 views); used only for those elements */
+  --inner: #0966a8; --inner-ink: #0966a8; --inner-soft: #e8f1fa; --inner-tint: #f4f8fc; --inner-line: #c4dbef;
+  --outer: #b261cc; --outer-ink: #8a3aa3; --outer-soft: #f6e6f8; --outer-tint: #fcf1fb; --outer-line: #e8cdee;
+  --v-code: #1f9d55; --v-code-ink: #157443; --v-code-soft: #dbf8e2; --v-code-tint: #f1fcf4; --v-code-line: #b5e6c4;
+  --v-rat: #e8720e; --v-rat-ink: #a64f05; --v-rat-soft: #f6e7d7; --v-rat-tint: #fdf6ef; --v-rat-line: #efd2b3;
+  --v-fp: #f0645a; --v-fp-ink: #bc3a30; --v-fp-soft: #f8ede9; --v-fp-chip: #fde3df; --v-fp-tint: #fdf6f4; --v-fp-line: #f1cbc4;
   --band: #f8f2ec;
   --dg-bg: #fffdfa;
   --shadow-s: 0 1px 2px rgba(48, 36, 59, .05), 0 4px 16px rgba(48, 36, 59, .05);
@@ -35,13 +41,13 @@
   :root:not([data-site-theme="light"]) {
     --bg: #19141f; --bg-2: #1f1927; --surface: #241d2e; --ink: #f2ebf4; --ink-2: #d5c9db; --muted: #a497ad; --faint: #7a6d84;
     --line: #2f2639; --line-2: #42364e; --accent: #f0937a; --accent-ink: #f6ad98; --accent-soft: #3a2427; --lav: #2c2340; --lav-ink: #cdb6ef;
-    --plum: #eadff0; --pt-expert: #6d6178; --band: #1d1724; --dg-bg: #1f1828; --shadow-s: 0 1px 2px rgba(0,0,0,.25), 0 6px 20px rgba(0,0,0,.25); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35); color-scheme: dark;
+    --plum: #eadff0; --pt-expert: #6d6178; --band: #1d1724; --inner: #6fb3ea; --inner-ink: #94c8f2; --inner-soft: #1a3048; --inner-tint: #16202d; --inner-line: #29486a; --outer: #d495e6; --outer-ink: #e2b4ef; --outer-soft: #35203f; --outer-tint: #231a2c; --outer-line: #52325f; --v-code: #5ccf8c; --v-code-ink: #86dfaa; --v-code-soft: #173323; --v-code-tint: #17221d; --v-code-line: #285a3c; --v-rat: #f3a05a; --v-rat-ink: #f7b984; --v-rat-soft: #3a2716; --v-rat-tint: #251d18; --v-rat-line: #5e3f22; --v-fp: #f6877e; --v-fp-ink: #f9aaa3; --v-fp-soft: #3a2123; --v-fp-chip: #45242a; --v-fp-tint: #261b20; --v-fp-line: #643a3c; --dg-bg: #1f1828; --shadow-s: 0 1px 2px rgba(0,0,0,.25), 0 6px 20px rgba(0,0,0,.25); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35); color-scheme: dark;
   }
 }
 :root[data-site-theme="dark"] {
   --bg: #19141f; --bg-2: #1f1927; --surface: #241d2e; --ink: #f2ebf4; --ink-2: #d5c9db; --muted: #a497ad; --faint: #7a6d84;
   --line: #2f2639; --line-2: #42364e; --accent: #f0937a; --accent-ink: #f6ad98; --accent-soft: #3a2427; --lav: #2c2340; --lav-ink: #cdb6ef;
-  --plum: #eadff0; --pt-expert: #6d6178; --band: #1d1724; --dg-bg: #1f1828; --shadow-s: 0 1px 2px rgba(0,0,0,.25), 0 6px 20px rgba(0,0,0,.25); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35); color-scheme: dark;
+  --plum: #eadff0; --pt-expert: #6d6178; --band: #1d1724; --inner: #6fb3ea; --inner-ink: #94c8f2; --inner-soft: #1a3048; --inner-tint: #16202d; --inner-line: #29486a; --outer: #d495e6; --outer-ink: #e2b4ef; --outer-soft: #35203f; --outer-tint: #231a2c; --outer-line: #52325f; --v-code: #5ccf8c; --v-code-ink: #86dfaa; --v-code-soft: #173323; --v-code-tint: #17221d; --v-code-line: #285a3c; --v-rat: #f3a05a; --v-rat-ink: #f7b984; --v-rat-soft: #3a2716; --v-rat-tint: #251d18; --v-rat-line: #5e3f22; --v-fp: #f6877e; --v-fp-ink: #f9aaa3; --v-fp-soft: #3a2123; --v-fp-chip: #45242a; --v-fp-tint: #261b20; --v-fp-line: #643a3c; --dg-bg: #1f1828; --shadow-s: 0 1px 2px rgba(0,0,0,.25), 0 6px 20px rgba(0,0,0,.25); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35); color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -194,10 +200,22 @@ select:focus, input[type="search"]:focus { border-color: var(--accent); outline:
 }
 .figure figcaption { font-size: .86rem; color: var(--muted); margin-top: 12px; max-width: 80ch; }
 .zoomable { cursor: zoom-in; }
-.loops { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 56px); margin-top: 44px; }
-@media (max-width: 760px) { .loops { grid-template-columns: 1fr; } }
+.loops { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.4vw, 24px); margin-top: 44px; }
+@media (max-width: 760px) { .loops { grid-template-columns: 1fr; gap: 16px; } }
 .loop h3 { display: flex; align-items: baseline; gap: 10px; }
 .loop h3 .k { font: 700 .74rem/1 var(--f-mono); color: var(--accent); }
+/* inner = blue, outer = purple (paper Fig. 2) */
+.loop-inner { --lp: var(--inner); --lp-ink: var(--inner-ink); --lp-soft: var(--inner-soft); --lp-tint: var(--inner-tint); --lp-line: var(--inner-line); }
+.loop-outer { --lp: var(--outer); --lp-ink: var(--outer-ink); --lp-soft: var(--outer-soft); --lp-tint: var(--outer-tint); --lp-line: var(--outer-line); }
+.loop-inner, .loop-outer { background: var(--lp-tint); border: 1px solid var(--lp-line); border-top: 3px solid var(--lp); border-radius: var(--radius); padding: clamp(18px, 2.4vw, 26px) clamp(16px, 2.4vw, 26px) 8px; }
+.loop-inner h3 .k, .loop-outer h3 .k { color: var(--lp-ink); background: var(--lp-soft); border: 1px solid var(--lp-line); padding: 4px 7px; border-radius: 6px; letter-spacing: .06em; }
+.loop-inner .steps li::before, .loop-outer .steps li::before { color: var(--lp-ink); background: var(--lp-soft); border-color: var(--lp-line); }
+.loop-inner .steps li:not(:last-child)::after, .loop-outer .steps li:not(:last-child)::after { background: var(--lp-line); }
+.t-inner { color: var(--inner-ink); font-weight: 600; }
+.t-outer { color: var(--outer-ink); font-weight: 600; }
+.sec-inner .eyebrow { color: var(--inner); }
+[data-goinner] { color: var(--inner-ink); border-color: var(--inner-line); }
+[data-goinner]:hover { color: var(--inner-ink); border-color: var(--inner); background: var(--inner-tint); }
 .steps { list-style: none; padding: 0; margin: 14px 0 0; counter-reset: s; }
 .steps li { position: relative; padding: 0 0 14px 34px; color: var(--ink-2); font-size: .97rem; }
 .steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line-2); font: 700 .72rem/20px var(--f-display); text-align: center; color: var(--muted); }

@@ -56,6 +56,10 @@ Most neural architecture search works inside a fixed space of cells and operator
 ## How it works
 
 <p align="center"><img src="assets/pipeline.png" width="92%" alt="OpenArchEvo pipeline: inner loop with LLM, islands and surrogate; outer loop with selection, real training and archive update"></p>
+<p align="center"><sub><b>Pipeline.</b> The <b>inner loop</b> (blue) evolves LLM-written programs on islands and screens them with a surrogate; the <b>outer loop</b> (purple) trains a small, selected batch and updates the archive.</sub></p>
+
+<p align="center"><img src="assets/representation.png" width="92%" alt="Three-view architecture representation: code, design rationale and behavioural fingerprint"></p>
+<p align="center"><sub><b>Three-view representation.</b> Every program is described by its <b>code</b> (CodeBLEU), its <b>design rationale</b> (text embedding) and a <b>behavioural fingerprint</b> (21 statistics, incl. spike-pattern and firing-rate probes, measured before training). They drive novelty, duplicate screening and the surrogate.</sub></p>
 
 
 1. **Inner loop.** On islands of related programs, the LLM rewrites parent programs (code + design rationale); thousands of candidates per iteration, none trained.
