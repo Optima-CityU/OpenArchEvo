@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://thuroi0787.github.io/OpenArchEvo/">
+  <a href="https://optima-cityu.github.io/OpenArchEvo/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
       <img src="assets/banner-light.png" width="100%" alt="OpenArchEvo: architecture search beyond the search space">
@@ -10,10 +10,10 @@
 <h3 align="center">An LLM writes complete architecture programs.<br>A population-based evolutionary search decides which ones survive.</h3>
 
 <p align="center">
-  <a href="https://thuroi0787.github.io/OpenArchEvo/"><img src="https://img.shields.io/badge/project%20page-live%20demo-b54834?style=flat" alt="Project page"></a>
+  <a href="https://optima-cityu.github.io/OpenArchEvo/"><img src="https://img.shields.io/badge/project%20page-live%20demo-b54834?style=flat" alt="Project page"></a>
   <a href="https://arxiv.org/abs/2609.40258"><img src="https://img.shields.io/badge/arXiv-2609.40258-b31b1b?style=flat" alt="arXiv"></a>
   <a href="zoo/"><img src="https://img.shields.io/badge/zoo-171%20trained%20%2B%20152%20ASI--Arch-30243b?style=flat" alt="Architecture zoo"></a>
-  <a href="https://github.com/THUROI0787/OpenArchEvo/actions/workflows/tests.yml"><img src="https://github.com/THUROI0787/OpenArchEvo/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+  <a href="https://github.com/Optima-CityU/OpenArchEvo/actions/workflows/tests.yml"><img src="https://github.com/Optima-CityU/OpenArchEvo/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
   <img src="https://img.shields.io/badge/python-3.10%2B-6f5a80?style=flat" alt="Python 3.10+">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-8a7d95?style=flat" alt="License"></a>
 </p>
@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  <a href="https://thuroi0787.github.io/OpenArchEvo/"><b>Project page</b></a> ·
+  <a href="https://optima-cityu.github.io/OpenArchEvo/"><b>Project page</b></a> ·
   <a href="https://arxiv.org/abs/2609.40258"><b>Paper</b></a> ·
   <a href="zoo/"><b>Architecture zoo</b></a> ·
   <a href="#citation"><b>Citation</b></a>
@@ -44,8 +44,8 @@ Most neural architecture search works inside a fixed space of cells and operator
 
 <table>
   <tr>
-    <td width="50%"><a href="https://thuroi0787.github.io/OpenArchEvo/#evolution"><img src="assets/preview-evolution.png" alt="Interactive evolution view"></a></td>
-    <td width="50%"><a href="https://thuroi0787.github.io/OpenArchEvo/arch.html?arch=i09-s0557"><img src="assets/preview-architecture.png" alt="Architecture page with block diagram"></a></td>
+    <td width="50%"><a href="https://optima-cityu.github.io/OpenArchEvo/#evolution"><img src="assets/preview-evolution.png" alt="Interactive evolution view"></a></td>
+    <td width="50%"><a href="https://optima-cityu.github.io/OpenArchEvo/arch.html?arch=i09-s0557"><img src="assets/preview-architecture.png" alt="Architecture page with block diagram"></a></td>
   </tr>
   <tr>
     <td align="center"><sub>Replay ten iterations of the search and click any of the 171 trained architectures.</sub></td>
@@ -73,7 +73,7 @@ Details: [docs/pipeline.md](docs/pipeline.md).
 ## Quickstart (CPU, no GPU or LLM)
 
 ```bash
-git clone https://github.com/THUROI0787/OpenArchEvo && cd OpenArchEvo
+git clone https://github.com/Optima-CityU/OpenArchEvo && cd OpenArchEvo
 pip install -e ".[dev]"
 python scripts/run_round.py --run-dir runs/demo --dry-run --auto
 ```

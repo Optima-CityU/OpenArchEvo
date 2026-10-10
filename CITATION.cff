@@ -4,8 +4,8 @@ title: "OpenArchEvo"
 type: software
 version: "0.1.0"
 license: Apache-2.0
-repository-code: "https://github.com/THUROI0787/OpenArchEvo"
-url: "https://thuroi0787.github.io/OpenArchEvo/"
+repository-code: "https://github.com/Optima-CityU/OpenArchEvo"
+url: "https://optima-cityu.github.io/OpenArchEvo/"
 authors:
   - family-names: Zhao
     given-names: Ruoyu

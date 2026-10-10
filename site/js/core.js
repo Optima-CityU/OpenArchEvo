@@ -3,7 +3,7 @@ export const PAPER = {
   title: 'Large Language Model-Guided Evolutionary Discovery of Native Neural Architectures for Spiking Sequence Modeling',
   arxiv: 'https://arxiv.org/abs/2609.40258',
   pdf: 'https://arxiv.org/pdf/2609.40258',
-  code: 'https://github.com/THUROI0787/OpenArchEvo',
+  code: 'https://github.com/Optima-CityU/OpenArchEvo',
 };
 
 export const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;

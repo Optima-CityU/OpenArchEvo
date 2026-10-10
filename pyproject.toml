@@ -34,8 +34,8 @@ zoo = ["torch>=2.4", "einops>=0.7", "flash-linear-attention"]
 dev = ["pytest>=7"]
 
 [project.urls]
-Homepage = "https://thuroi0787.github.io/OpenArchEvo/"
-Repository = "https://github.com/THUROI0787/OpenArchEvo"
+Homepage = "https://optima-cityu.github.io/OpenArchEvo/"
+Repository = "https://github.com/Optima-CityU/OpenArchEvo"
 Paper = "https://arxiv.org/abs/2609.40258"
 
 [tool.setuptools.packages.find]
