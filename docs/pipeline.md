@@ -88,7 +88,8 @@ itself scores 0.5. In the paper the anchor is the SpikingDeltaNet expert
    name, a rationale and new code. The order is the only performance
    information in the prompt: no metric values are shown.
 4. A proposal is rejected if it does not parse, cannot be built and run by the
-   surrogate service, or is a near-duplicate of a parent or island member.
+   surrogate service, fails the causality check, or is a
+   near-duplicate of a parent or island member.
 5. Accepted programs get a fingerprint and a predicted ŷ, join the most similar
    island and enter the round's pool. Islands are trimmed when they grow too
    large, and the weaker half is periodically reset from the stronger half.
@@ -163,6 +164,11 @@ task metric with a TabPFN regressor fitted on the archive (perplexity in log
 space). Settings: `configs/surrogate.yaml`. The search side talks to it through
 `SurrogateClient` at `SURROGATE_URL`.
 
+Causality checks are required before candidate evaluation. Causality violations
+are a common form of reward hacking during evolution: a program can exploit
+future tokens to obtain artificially favorable language-model scores. The
+checks reject such candidates to keep the search focused on valid causal models.
+
 The service executes any code posted to it. Keep it on loopback; see the
 security notes in [real-run.md](real-run.md).
 
@@ -186,3 +192,6 @@ The spiking setup follows SpikingSSM (Shen et al., AAAI 2025,
 https://github.com/shenshuaijie/SDN): hard-reset LIF neurons whose membrane
 potentials are computed by the pretrained SDN network (`neuron_type: sdn`).
 `bptt` and `sltt` neurons need no checkpoint and are useful for testing.
+
+WikiText-2 training also requires a causality check to prevent future-token
+leakage from inflating the measured fitness.

@@ -1,7 +1,7 @@
 """Extract the 21-dim behavioural fingerprint of a program (requires PyTorch).
 
 ``extract_fingerprint`` builds the fixed probing wrapper around the program's
-block class (:mod:`openarchevo.contract`), computes the seven probes on a fixed minibatch and the
+block class (:mod:`openarchevo.contract`), checks causality, computes the seven probes on a fixed minibatch and the
 fourteen structural statistics on a single block. ``extract_in_subprocess``
 does the same in a fresh process with a timeout, which is how the surrogate
 service runs untrusted LLM-written code.
@@ -61,11 +61,19 @@ def extract_fingerprint(code: str, cfg: FingerprintConfig, device: str = "cuda:0
     from openarchevo.fingerprint.probes import compute_probes
     from openarchevo.fingerprint.structure import structural_features
     from openarchevo.models import SequenceModel, load_block_class
+    from openarchevo.models.causality import check_block_causality
 
     # Search-time feasibility: run the program as the original search did, with whatever
     # optional imports its own try/except fallbacks handle (no strict dependency check).
     block_cls = load_block_class(code, check_imports=False)
     w, p = cfg.wrapper, cfg.probe
+
+    # Match the experiment's LM-sized eligibility probe, independently of the
+    # smaller ListOps fingerprint wrapper. Rejection precedes all feature work.
+    try:
+        check_block_causality(block_cls, device=device, label="fingerprint", neuron_type=cfg.neuron_type)
+    except RuntimeError as exc:
+        raise FingerprintError(str(exc)) from exc
 
     set_seed(cfg.seed)
     model = SequenceModel(block_cls, vocab_size=p.vocab_size, n_outputs=p.n_classes, d_model=w.d_model,

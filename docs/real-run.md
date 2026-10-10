@@ -76,3 +76,8 @@ Without `--auto`, you can rehearse the hand-off offline with
 `python scripts/ingest_results.py --run-dir runs/demo --dry-run --fake-train`.
 
 Data formats and the run-directory layout: [pipeline.md](pipeline.md).
+
+Causality checks run automatically during candidate evaluation and before
+WikiText-2 training. They are necessary to prevent reward hacking through
+future-token leakage, a common failure mode during evolution that can inflate
+scores without improving causal prediction. Candidates that fail are rejected.
