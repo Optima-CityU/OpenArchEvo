@@ -15,7 +15,7 @@ function load(k) { try { return localStorage.getItem(k); } catch (e) { return nu
 export function siteTheme() {
   const explicit = document.documentElement.getAttribute('data-site-theme');
   if (explicit) return explicit;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'light';
 }
 export function initTheme() {
   const saved = load(THEME_KEY);
