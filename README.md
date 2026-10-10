@@ -1,18 +1,62 @@
-# OpenArchEvo
+<p align="center">
+  <a href="https://thuroi0787.github.io/OpenArchEvo/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
+      <img src="assets/banner-light.png" width="100%" alt="OpenArchEvo: architecture search beyond the search space">
+    </picture>
+  </a>
+</p>
 
-**Architecture search beyond the search space.** An LLM is the mutation operator
-of a population-based evolutionary search over executable architecture code;
-a surrogate and three-view novelty decide which programs survive.
+<h3 align="center">An LLM writes complete architecture programs.<br>A population-based evolutionary search decides which ones survive.</h3>
 
-[Project page](https://thuroi0787.github.io/OpenArchEvo/) · [Paper (arXiv:2609.40258)](https://arxiv.org/abs/2609.40258) · [Architecture zoo](zoo/)
+<p align="center">
+  <a href="https://thuroi0787.github.io/OpenArchEvo/"><img src="https://img.shields.io/badge/project%20page-live%20demo-b54834?style=flat" alt="Project page"></a>
+  <a href="https://arxiv.org/abs/2609.40258"><img src="https://img.shields.io/badge/arXiv-2609.40258-b31b1b?style=flat" alt="arXiv"></a>
+  <a href="zoo/"><img src="https://img.shields.io/badge/zoo-171%20trained%20%2B%20152%20ASI--Arch-30243b?style=flat" alt="Architecture zoo"></a>
+  <a href="https://github.com/THUROI0787/OpenArchEvo/actions/workflows/tests.yml"><img src="https://github.com/THUROI0787/OpenArchEvo/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+  <img src="https://img.shields.io/badge/python-3.10%2B-6f5a80?style=flat" alt="Python 3.10+">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-8a7d95?style=flat" alt="License"></a>
+</p>
+
+<p align="center">
+  <b>Ruoyu Zhao<sup>*</sup> · Jiaqi Wu<sup>*</sup> · Chenyu Zhu · Zhichao Lu<sup>&dagger;</sup></b><br>
+  City University of Hong Kong<br>
+  <sub><sup>*</sup> Equal contribution · <sup>&dagger;</sup> Corresponding author</sub>
+</p>
+
+<p align="center">
+  <a href="https://thuroi0787.github.io/OpenArchEvo/"><b>Project page</b></a> ·
+  <a href="https://arxiv.org/abs/2609.40258"><b>Paper</b></a> ·
+  <a href="zoo/"><b>Architecture zoo</b></a> ·
+  <a href="#citation"><b>Citation</b></a>
+</p>
+
+---
+
+Most neural architecture search works inside a fixed space of cells and operators. **OpenArchEvo searches over code**: an LLM acts as the mutation operator and rewrites whole architecture programs, while a population-based evolutionary loop with islands, a surrogate and a three-view novelty measure decides what survives and what gets trained. The pipeline is problem-agnostic; in the paper we use it to discover **native spiking sequence models**.
+
+## Highlights
+
+- **Open program space.** Candidates are executable PyTorch blocks, so the search can invent mechanisms no predefined space contains.
+- **Evolution, not a single agent.** Multi-island populations, NSGA-II selection over predicted fitness and novelty, and a TabPFN surrogate screen thousands of LLM proposals per iteration; only ≤16 are trained.
+- **Three-view representation.** Code, design rationale and a behavioural fingerprint (spike-pattern and firing-rate probes plus module and structural statistics) describe every program before training.
+- **Results.** 10 iterations, 151 new trained architectures, about 132 V100 GPU-days. NeuroGate reaches 26.4 WikiText-103 PPL, ahead of the ANN DeltaNet (27.5), with 31.7× lower estimated arithmetic energy than a dense Transformer.
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://thuroi0787.github.io/OpenArchEvo/#evolution"><img src="assets/preview-evolution.png" alt="Interactive evolution view"></a></td>
+    <td width="50%"><a href="https://thuroi0787.github.io/OpenArchEvo/arch.html?arch=i09-s0557"><img src="assets/preview-architecture.png" alt="Architecture page with block diagram"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Replay ten iterations of the search and click any of the 171 trained architectures.</sub></td>
+    <td align="center"><sub>Every architecture has a block diagram, its source code, the LLM's design rationale and metrics.</sub></td>
+  </tr>
+</table>
+
+## How it works
 
 <p align="center"><img src="assets/pipeline.png" width="92%" alt="OpenArchEvo pipeline: inner loop with LLM, islands and surrogate; outer loop with selection, real training and archive update"></p>
 
-In the paper, OpenArchEvo discovers native spiking sequence blocks for language
-modelling. The pipeline itself is problem-agnostic: anything you can write as
-a Python program and train on a proxy task can be searched.
-
-## How it works
 
 1. **Inner loop.** On islands of related programs, the LLM rewrites parent programs (code + design rationale); thousands of candidates per iteration, none trained.
 2. **Outer loop.** Picks a small batch (≤16) by predicted fitness and novelty, hands it off for real training, and adds the measured results to the archive.
@@ -54,7 +98,7 @@ Source code of every architecture trained in the paper's search, with metrics in
 | [`zoo/elites/`](zoo/elites/) | 3 | The three architectures analysed in the paper: NeuroGate, HomeoResSSM, LoopMem |
 | [`zoo/asi_arch/`](zoo/asi_arch/) | 152 | ASI-Arch-derived programs from an earlier study (separate protocol) |
 
-## Citation
+## Citation <a id="citation"></a>
 
 ```bibtex
 @article{zhao2026openarchevo,
@@ -66,6 +110,6 @@ Source code of every architecture trained in the paper's search, with metrics in
 }
 ```
 
-Ruoyu Zhao and Jiaqi Wu contributed equally. Apache License 2.0 ([LICENSE](LICENSE));
+Apache License 2.0 ([LICENSE](LICENSE));
 third-party code, weights and datasets: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 No model weights or datasets are included.
